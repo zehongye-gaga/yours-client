@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'unsafe-inline' blob:; style-src 'unsafe-inline'; font-src data:; connect-src 'none'; img-src data: blob:; frame-src 'self' about:;">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Yours Client 微内核实现手册：职责边界、核心原理、交互式生命周期、跨进程契约与架构决策记录。">
+  <title>Yours Client · 微内核实现手册</title>
+  <style>__HANDBOOK_CSS__</style>
+</head>
+<body>
+  <a class="skip-link" href="#content">跳到正文</a>
+  <aside class="sidebar" id="sidebar" aria-label="章节导航">
+    <a class="brand" href="#overview" aria-label="Yours Client 手册首页">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span><strong>yours<span class="brand-dot">.</span></strong><small>ARCHITECTURE NOTES</small></span>
+    </a>
+    <div class="sidebar-label">实现手册 <span>v0.2</span></div>
+    <nav id="chapter-nav"></nav>
+    <div class="sidebar-bottom">
+      <div class="sidebar-progress-title"><span>我的决策记录</span><strong id="sidebar-count">0 / 12</strong></div>
+      <div class="progress-track"><span id="sidebar-progress"></span></div>
+      <p id="storage-status">笔记保存在当前浏览器<br>可随时导出备份</p>
+      <div class="sidebar-foot"><span class="status-dot"></span>Cordis 已引入 · 2026.10.24</div>
+    </div>
+  </aside>
+  <button class="sidebar-scrim" id="sidebar-scrim" aria-label="关闭目录" hidden></button>
+  <div class="workspace">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menu-toggle" aria-label="打开目录" aria-expanded="false">☰</button>
+      <div class="breadcrumb"><span>Yours Client</span><span class="divider">/</span><strong id="current-chapter">从哪里开始</strong></div>
+      <div class="topbar-actions">
+        <button class="search-trigger" id="search-trigger"><span aria-hidden="true">⌕</span><span>搜索问题与原理</span><kbd>⌘ K</kbd></button>
+        <button class="icon-button" id="theme-toggle" aria-label="切换为深色主题" title="切换主题">◐</button>
+        <button class="button compact top-export" id="top-export">导出记录 <span aria-hidden="true">↗</span></button>
+      </div>
+    </header>
+    <main id="content" class="content" tabindex="-1">
+      <noscript><p>请启用 JavaScript 阅读交互章节和记录决策。原始文档位于同目录的 microkernel-design.md。</p></noscript>
+      <div id="chapters"></div>
+    </main>
+    <footer class="page-footer"><span>YOURS CLIENT · IMPLEMENTATION HANDBOOK</span><span>Cordis 原生 API 与产品扩展分别标识 · 页面演示不执行插件</span></footer>
+  </div>
+  <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+    <div class="search-dialog-header"><label class="sr-only" id="search-title" for="global-search">搜索手册</label><span aria-hidden="true">⌕</span><input id="global-search" type="search" placeholder="输入问题、机制或术语…" autocomplete="off"><button class="key-button" data-close="search-dialog" aria-label="关闭搜索">Esc</button></div>
+    <div id="search-results" class="search-results"></div>
+    <div class="search-dialog-footer"><span>搜索章节、问题、决策与术语</span><span>↑ ↓ 选择 · Enter 打开</span></div>
+  </dialog>
+  <dialog id="map-dialog" class="map-dialog" aria-labelledby="map-title">
+    <div class="dialog-toolbar"><div><span class="eyebrow">ARCHITECTURE MAP</span><h2 id="map-title">微内核协作图</h2></div><div class="toolbar-actions"><button class="button compact" id="download-map">下载独立图</button><button class="icon-button" data-close="map-dialog" aria-label="关闭架构图">×</button></div></div>
+    <iframe id="map-frame" title="Yours Client 可交互架构图"></iframe>
+  </dialog>
+  <dialog id="import-dialog" class="confirm-dialog" aria-labelledby="import-title">
+    <h2 id="import-title">合并导入记录</h2><p id="import-summary"></p><p class="muted">同编号的笔记和状态会使用导入值，其他现有记录保留。导入不会修改项目文档。</p><div class="toolbar-actions"><button class="button" data-close="import-dialog">取消</button><button class="button primary" id="confirm-import">确认合并</button></div>
+  </dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <input type="file" id="import-file" accept="application/json,.json" hidden>
+  <script type="application/json" id="handbook-data">__HANDBOOK_DATA__</script>
+  <script type="application/json" id="diagram-data">__DIAGRAM_DATA__</script>
+  <script>__HANDBOOK_APP__</script>
+</body>
+</html>

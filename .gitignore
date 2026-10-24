@@ -1,0 +1,5 @@
+node_modules/
+vendor/cordis/packages/core/lib/
+coverage/
+*.tsbuildinfo
+.DS_Store

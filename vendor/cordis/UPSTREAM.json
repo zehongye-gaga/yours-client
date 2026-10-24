@@ -1,0 +1,157 @@
+{
+  "repository": "https://github.com/cordiverse/cordis",
+  "commit": "35fdc969e4b6c48c48ed44717c7a018324e4dd88",
+  "package": "cordis",
+  "version": "4.0.0-rc.12",
+  "importedAt": "2026-10-24",
+  "license": "MIT",
+  "scope": "packages/core plus upstream license and TypeScript configuration references",
+  "sourceModifications": [],
+  "files": {
+    "LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/core/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/core/README.md": {
+      "upstreamPath": "packages/core/README.md",
+      "sha256": "19dab093b65d126f083c5ccdaa09dc27ca77ee0cd59974d51cfedf8af7708762"
+    },
+    "packages/core/bin.js": {
+      "upstreamPath": "packages/core/bin.js",
+      "sha256": "ea66335dacb9db67798d60192c1499901f0616c91b4ace6dd5fbe2f7c9a5bd3c"
+    },
+    "packages/core/package.json": {
+      "upstreamPath": "packages/core/package.json",
+      "sha256": "12f552373f385c7b26b4b72f90da3b65cf567518b7cb26b36aaa36f519ba899b"
+    },
+    "packages/core/src/context.ts": {
+      "upstreamPath": "packages/core/src/context.ts",
+      "sha256": "de2a085933307a31fb01bdfee8f666726ff2db22304833b0c90ebb434c935b26"
+    },
+    "packages/core/src/events.ts": {
+      "upstreamPath": "packages/core/src/events.ts",
+      "sha256": "3d17e89a3695b2585787fb46cdaaafbd1edaa73259410c10e7def3032d369450"
+    },
+    "packages/core/src/fiber.ts": {
+      "upstreamPath": "packages/core/src/fiber.ts",
+      "sha256": "dde04d30212137e0b13fd2b9f7c43ed1a25a65a52919bfa2c48edd64cec6afd0"
+    },
+    "packages/core/src/index.ts": {
+      "upstreamPath": "packages/core/src/index.ts",
+      "sha256": "49df2031dd6590d606813f4d25220ce3ce177163c5fcdbe1084b81a90f605ebf"
+    },
+    "packages/core/src/logger.ts": {
+      "upstreamPath": "packages/core/src/logger.ts",
+      "sha256": "5b99be04738208b5aa8114ba087b37844dab7d88998d428aa53f8e59e45b71a9"
+    },
+    "packages/core/src/reflect.ts": {
+      "upstreamPath": "packages/core/src/reflect.ts",
+      "sha256": "04399f610df5e93a0ecd97a6a0c220e43145fe1248e6ade4f5cb4c1c73a660d5"
+    },
+    "packages/core/src/registry.ts": {
+      "upstreamPath": "packages/core/src/registry.ts",
+      "sha256": "019a328cd60fa5df1cafad10e66e4250a66f59d37d8410355dc65dd2a26bbec1"
+    },
+    "packages/core/src/service.ts": {
+      "upstreamPath": "packages/core/src/service.ts",
+      "sha256": "be7868f4a85a75c95a010470ffa2e39043f90eb7fb9533cddd5986687699279c"
+    },
+    "packages/core/src/utils.ts": {
+      "upstreamPath": "packages/core/src/utils.ts",
+      "sha256": "d3d6a62efc6255e0b03e82b1d6108cc58337062b34ee52f5b0cb6675dfc50411"
+    },
+    "packages/core/tests/associate.spec.ts": {
+      "upstreamPath": "packages/core/tests/associate.spec.ts",
+      "sha256": "db46f516d464edebc7c7eb96eda555071ff4709b2bc797b68a0fd69af57bc0ce"
+    },
+    "packages/core/tests/decorator.spec.ts": {
+      "upstreamPath": "packages/core/tests/decorator.spec.ts",
+      "sha256": "76fef3ca9aabdca32caf5e3addbee149cc37ab986f25192a4cc7336878f29ca4"
+    },
+    "packages/core/tests/dispose.spec.ts": {
+      "upstreamPath": "packages/core/tests/dispose.spec.ts",
+      "sha256": "6d7bba4b193aa93bb3795ace6aab072695158da47def8f5d180adaa3c1dfdeed"
+    },
+    "packages/core/tests/events.spec.ts": {
+      "upstreamPath": "packages/core/tests/events.spec.ts",
+      "sha256": "52bbb9153ec8f81835e7d7975bb2173c023dfdc186582379a2aa375d47b89c26"
+    },
+    "packages/core/tests/events.types.ts": {
+      "upstreamPath": "packages/core/tests/events.types.ts",
+      "sha256": "d7618f6a6a235f4b610d0381ab25d9235f59b78b1ce3a90880d8f6b3d83bf0dd"
+    },
+    "packages/core/tests/fiber.spec.ts": {
+      "upstreamPath": "packages/core/tests/fiber.spec.ts",
+      "sha256": "0778839f5c927ddc8a03a604b3e02d0ca856e12229751980d5c71d26bf5a4462"
+    },
+    "packages/core/tests/intercept.spec.ts": {
+      "upstreamPath": "packages/core/tests/intercept.spec.ts",
+      "sha256": "9ef3bb7cc6901495870904c80a48a05eaf848c73435a5ec1f00c2b1c1298e78b"
+    },
+    "packages/core/tests/invoke.spec.ts": {
+      "upstreamPath": "packages/core/tests/invoke.spec.ts",
+      "sha256": "2324f1bfcb5bd7c6e66e1f12cae0712f35c0473252603bb673c81dbbf78f16b8"
+    },
+    "packages/core/tests/isolate.spec.ts": {
+      "upstreamPath": "packages/core/tests/isolate.spec.ts",
+      "sha256": "1d6cce39449594809f05727b3fff541e82b7289128fff912dd5ff3e30444c510"
+    },
+    "packages/core/tests/logger.spec.ts": {
+      "upstreamPath": "packages/core/tests/logger.spec.ts",
+      "sha256": "48b9aeddc3b7ea05539d83cf1f6fe79ce0f3af41608ab9dafc9900576579e8ba"
+    },
+    "packages/core/tests/plugin.spec.ts": {
+      "upstreamPath": "packages/core/tests/plugin.spec.ts",
+      "sha256": "4be86e1204126fe9180df0440e9f138dc587eb2c0b6bdaea10bd69db6b65e43d"
+    },
+    "packages/core/tests/reflect.spec.ts": {
+      "upstreamPath": "packages/core/tests/reflect.spec.ts",
+      "sha256": "54e82a0b46b5680e00122a2f95d6a406406e070b60f56e32bef2236485b79fbc"
+    },
+    "packages/core/tests/service-dispose.spec.ts": {
+      "upstreamPath": "packages/core/tests/service-dispose.spec.ts",
+      "sha256": "1f0174bffa5d1848f7d00ac9f01c2f661f5855dcf2f39ab1753c0ac8de11ec51"
+    },
+    "packages/core/tests/service.spec.ts": {
+      "upstreamPath": "packages/core/tests/service.spec.ts",
+      "sha256": "37323c556f91bcee85419aa08d5cf0df92e788b14388591ede9426521f9d74f4"
+    },
+    "packages/core/tests/shadow.spec.ts": {
+      "upstreamPath": "packages/core/tests/shadow.spec.ts",
+      "sha256": "d216898b76c54b1f38cfc46593e457c27a4738e98616ee6d6d15d804e5ac0459"
+    },
+    "packages/core/tests/tsconfig.json": {
+      "upstreamPath": "packages/core/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/core/tests/update.spec.ts": {
+      "upstreamPath": "packages/core/tests/update.spec.ts",
+      "sha256": "a322d7ff8c9a08b60e47c71c303220e601e5aea09a3783c8d784b0f9cda75dd4"
+    },
+    "packages/core/tests/utils.ts": {
+      "upstreamPath": "packages/core/tests/utils.ts",
+      "sha256": "c0efb8c2cd4c7f06efc7aa9d41402764eb17d69c72a2cd3f53813925f90b4999"
+    },
+    "packages/core/tsconfig.json": {
+      "upstreamPath": "packages/core/tsconfig.json",
+      "sha256": "38473a930317c487af4422f830d04ba63353c7d9e145104d588daa6c852be880"
+    },
+    "tsconfig.base.json": {
+      "upstreamPath": "tsconfig.base.json",
+      "sha256": "679935fb7bfd19ea62d907dabfcb154a3063e32268b63c7567523ac14dd25bb8"
+    },
+    "tsconfig.test.json": {
+      "upstreamPath": "tsconfig.test.json",
+      "sha256": "5b04ecb2a377d987f59a3a01dc24d1f50692fb41a466c0bb18be50e378108d54"
+    },
+    "tsconfig.json": {
+      "upstreamPath": "tsconfig.json",
+      "sha256": "660db4b6e995f42bb124de58f26a456e309ec822f31f2c8940a1b8faec53690d"
+    }
+  },
+  "localFork": true
+}

@@ -1,0 +1,879 @@
+{
+  "status": "passed",
+  "artifact": {
+    "path": "../../implementation-handbook.html",
+    "sha256": "2301629ffb53d5457b88b57b21f961e1c61a0876a6b5b611340921e51a108dda",
+    "bytes": 899483
+  },
+  "checkedAt": "2026-10-24T09:55:10.892Z",
+  "checks": [
+    {
+      "name": "10 chapters rendered without script errors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "browser is offline during verification",
+      "passed": true
+    },
+    {
+      "name": "theme changes",
+      "passed": true
+    },
+    {
+      "name": "containment 1440px / overview",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / boundaries",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / mechanisms",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / scenarios",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / interfaces",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / upgrade",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / decisions",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / roadmap",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / questions",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1440px / sources",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "scrollWidth": 1425,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / overview",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / boundaries",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / mechanisms",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / scenarios",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / interfaces",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / upgrade",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / decisions",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / roadmap",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / questions",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1600px / sources",
+      "passed": true,
+      "details": {
+        "width": 1600,
+        "scrollWidth": 1585,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / overview",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / boundaries",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / mechanisms",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / scenarios",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / interfaces",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / upgrade",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / decisions",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / roadmap",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / questions",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 1920px / sources",
+      "passed": true,
+      "details": {
+        "width": 1920,
+        "scrollWidth": 1905,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / overview",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / boundaries",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / mechanisms",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / scenarios",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / interfaces",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / upgrade",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / decisions",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / roadmap",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / questions",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 760px / sources",
+      "passed": true,
+      "details": {
+        "width": 760,
+        "scrollWidth": 745,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / overview",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / boundaries",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / mechanisms",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / scenarios",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / interfaces",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / upgrade",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / decisions",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / roadmap",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / questions",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "containment 390px / sources",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "scrollWidth": 375,
+        "visible": 1
+      }
+    },
+    {
+      "name": "mobile menu opens",
+      "passed": true
+    },
+    {
+      "name": "mobile navigation closes menu",
+      "passed": true
+    },
+    {
+      "name": "mechanism scope",
+      "passed": true
+    },
+    {
+      "name": "mechanism dependencies",
+      "passed": true
+    },
+    {
+      "name": "mechanism lifecycle",
+      "passed": true
+    },
+    {
+      "name": "mechanism effects",
+      "passed": true
+    },
+    {
+      "name": "mechanism registration",
+      "passed": true
+    },
+    {
+      "name": "mechanism events",
+      "passed": true
+    },
+    {
+      "name": "dependency/normal frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 4",
+      "passed": true,
+      "details": {
+        "count": "4 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 5",
+      "passed": true,
+      "details": {
+        "count": "5 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 6",
+      "passed": true,
+      "details": {
+        "count": "6 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 7",
+      "passed": true,
+      "details": {
+        "count": "7 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal frame 8",
+      "passed": true,
+      "details": {
+        "count": "8 / 8"
+      }
+    },
+    {
+      "name": "dependency/normal stops at last step",
+      "passed": true
+    },
+    {
+      "name": "dependency/normal reset",
+      "passed": true
+    },
+    {
+      "name": "cancellation/normal frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 5"
+      }
+    },
+    {
+      "name": "cancellation/normal frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 5"
+      }
+    },
+    {
+      "name": "cancellation/normal frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 5"
+      }
+    },
+    {
+      "name": "cancellation/normal frame 4",
+      "passed": true,
+      "details": {
+        "count": "4 / 5"
+      }
+    },
+    {
+      "name": "cancellation/normal frame 5",
+      "passed": true,
+      "details": {
+        "count": "5 / 5"
+      }
+    },
+    {
+      "name": "cancellation/normal stops at last step",
+      "passed": true
+    },
+    {
+      "name": "cancellation/normal reset",
+      "passed": true
+    },
+    {
+      "name": "transaction/failure frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 4"
+      }
+    },
+    {
+      "name": "transaction/failure frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 4"
+      }
+    },
+    {
+      "name": "transaction/failure frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 4"
+      }
+    },
+    {
+      "name": "transaction/failure frame 4",
+      "passed": true,
+      "details": {
+        "count": "4 / 4"
+      }
+    },
+    {
+      "name": "transaction/failure stops at last step",
+      "passed": true
+    },
+    {
+      "name": "transaction/failure reset",
+      "passed": true
+    },
+    {
+      "name": "transaction/success frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 3"
+      }
+    },
+    {
+      "name": "transaction/success frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 3"
+      }
+    },
+    {
+      "name": "transaction/success frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 3"
+      }
+    },
+    {
+      "name": "transaction/success stops at last step",
+      "passed": true
+    },
+    {
+      "name": "transaction/success reset",
+      "passed": true
+    },
+    {
+      "name": "cleanup/normal frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 5"
+      }
+    },
+    {
+      "name": "cleanup/normal frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 5"
+      }
+    },
+    {
+      "name": "cleanup/normal frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 5"
+      }
+    },
+    {
+      "name": "cleanup/normal frame 4",
+      "passed": true,
+      "details": {
+        "count": "4 / 5"
+      }
+    },
+    {
+      "name": "cleanup/normal frame 5",
+      "passed": true,
+      "details": {
+        "count": "5 / 5"
+      }
+    },
+    {
+      "name": "cleanup/normal stops at last step",
+      "passed": true
+    },
+    {
+      "name": "cleanup/normal reset",
+      "passed": true
+    },
+    {
+      "name": "upgrade/success frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success frame 4",
+      "passed": true,
+      "details": {
+        "count": "4 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success frame 5",
+      "passed": true,
+      "details": {
+        "count": "5 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success frame 6",
+      "passed": true,
+      "details": {
+        "count": "6 / 6"
+      }
+    },
+    {
+      "name": "upgrade/success stops at last step",
+      "passed": true
+    },
+    {
+      "name": "upgrade/success reset",
+      "passed": true
+    },
+    {
+      "name": "upgrade/failure frame 1",
+      "passed": true,
+      "details": {
+        "count": "1 / 3"
+      }
+    },
+    {
+      "name": "upgrade/failure frame 2",
+      "passed": true,
+      "details": {
+        "count": "2 / 3"
+      }
+    },
+    {
+      "name": "upgrade/failure frame 3",
+      "passed": true,
+      "details": {
+        "count": "3 / 3"
+      }
+    },
+    {
+      "name": "upgrade/failure stops at last step",
+      "passed": true
+    },
+    {
+      "name": "upgrade/failure reset",
+      "passed": true
+    },
+    {
+      "name": "cannot verify without choice",
+      "passed": true
+    },
+    {
+      "name": "cannot verify without evidence",
+      "passed": true
+    },
+    {
+      "name": "verification requires and accepts evidence",
+      "passed": true
+    },
+    {
+      "name": "record, checklist, and theme persist across reload",
+      "passed": true
+    },
+    {
+      "name": "changed evidence requires reverification",
+      "passed": true
+    },
+    {
+      "name": "decision filter",
+      "passed": true
+    },
+    {
+      "name": "JSON export preserves records and checks",
+      "passed": true
+    },
+    {
+      "name": "Markdown exports all decisions and checklist",
+      "passed": true
+    },
+    {
+      "name": "invalid import changes nothing",
+      "passed": true
+    },
+    {
+      "name": "valid import asks for merge before changing records",
+      "passed": true
+    },
+    {
+      "name": "import merges, preserves existing records, escapes notes",
+      "passed": true
+    },
+    {
+      "name": "FAQ search filters content",
+      "passed": true
+    },
+    {
+      "name": "global search finds decisions",
+      "passed": true
+    },
+    {
+      "name": "search navigates and opens result",
+      "passed": true
+    },
+    {
+      "name": "embedded offline diagram renders",
+      "passed": true
+    },
+    {
+      "name": "no runtime exceptions",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "no external resource fetched; optional diagram font is blocked",
+      "passed": true,
+      "details": [
+        {
+          "id": "47203.4",
+          "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap",
+          "blocked": "csp"
+        }
+      ]
+    }
+  ],
+  "runtimeErrors": [],
+  "failure": null,
+  "visualReview": "pending"
+}

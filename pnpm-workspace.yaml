@@ -1,0 +1,5 @@
+packages:
+  - vendor/cordis/packages/core
+
+onlyBuiltDependencies:
+  - esbuild

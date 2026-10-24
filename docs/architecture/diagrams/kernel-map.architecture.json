@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Yours Client 微内核协作图",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "viewBox": [
+      1120,
+      590
+    ]
+  },
+  "components": [
+    {
+      "id": "workbench",
+      "type": "frontend",
+      "label": "交互工作台",
+      "sublabel": "React · Slots · iframe",
+      "pos": [
+        50,
+        50
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "profile",
+      "type": "backend",
+      "label": "Profile Resolver",
+      "sublabel": "决定启用哪些实例",
+      "pos": [
+        450,
+        50
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "host-storage",
+      "type": "database",
+      "label": "宿主存储",
+      "sublabel": "配置 · 独立数据目录",
+      "pos": [
+        850,
+        50
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "broker",
+      "type": "security",
+      "label": "Capability Broker",
+      "sublabel": "身份 · 授权 · 调用",
+      "pos": [
+        50,
+        250
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "kernel",
+      "type": "backend",
+      "label": "Cordis 本地分支",
+      "sublabel": "Context · Fiber · effect",
+      "pos": [
+        450,
+        250
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "runtime-adapter",
+      "type": "backend",
+      "label": "运行适配层",
+      "sublabel": "进程管理 · 远程代理",
+      "pos": [
+        850,
+        250
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "agent",
+      "type": "backend",
+      "label": "Agent Runtime",
+      "sublabel": "模型请求 · 工具快照",
+      "pos": [
+        50,
+        450
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "registries",
+      "type": "messagebus",
+      "label": "工具与界面注册表",
+      "sublabel": "归属 · 批次 · 修订",
+      "pos": [
+        450,
+        450
+      ],
+      "size": [
+        220,
+        80
+      ]
+    },
+    {
+      "id": "node-plugin",
+      "type": "external",
+      "label": "Node 业务插件",
+      "sublabel": "独立进程 · 业务逻辑",
+      "pos": [
+        850,
+        450
+      ],
+      "size": [
+        220,
+        80
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "ui-calls",
+      "from": "workbench",
+      "to": "broker",
+      "label": "调用与订阅",
+      "variant": "emphasis",
+      "labelDy": 100
+    },
+    {
+      "id": "broker-resolves",
+      "from": "broker",
+      "to": "kernel",
+      "label": "解析服务",
+      "variant": "emphasis"
+    },
+    {
+      "id": "kernel-controls",
+      "from": "kernel",
+      "to": "runtime-adapter",
+      "label": "启停实例",
+      "variant": "emphasis"
+    },
+    {
+      "id": "runtime-rpc",
+      "from": "runtime-adapter",
+      "to": "node-plugin",
+      "label": "JSON-RPC",
+      "variant": "emphasis",
+      "labelDy": 100
+    },
+    {
+      "id": "profile-mounts",
+      "from": "profile",
+      "to": "kernel",
+      "label": "挂载配置",
+      "labelDy": 100
+    },
+    {
+      "id": "host-injects",
+      "from": "host-storage",
+      "to": "runtime-adapter",
+      "label": "提供数据目录",
+      "labelDy": 100
+    },
+    {
+      "id": "agent-invokes",
+      "from": "agent",
+      "to": "broker",
+      "label": "工具调用"
+    },
+    {
+      "id": "registries-owned",
+      "from": "registries",
+      "to": "kernel",
+      "label": "注册与回收"
+    }
+  ]
+}

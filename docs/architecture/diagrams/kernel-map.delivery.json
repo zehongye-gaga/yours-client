@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "ok": true,
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/relu/Documents/yours-client/docs/architecture/diagrams/kernel-map.architecture.json",
+  "output": "/Users/relu/Documents/yours-client/docs/architecture/diagrams/kernel-map.html",
+  "specification": {
+    "sha256": "a9c3bbdb04302d09b5fe17e37a436d2a60cbee8f666d59d0738b34dda3754208",
+    "bytes": 3670
+  },
+  "artifact": {
+    "sha256": "a0e8f7b04ab8a7ed8fde7c81618e3e6bd80f9a6c0e15fe9b39a5e90cd2877358",
+    "bytes": 711933
+  },
+  "validation": {
+    "checksPassed": 9,
+    "checkCount": 9,
+    "compositionProfile": "showcase",
+    "compositionStatus": "pass",
+    "errors": 0,
+    "warnings": 0
+  }
+}

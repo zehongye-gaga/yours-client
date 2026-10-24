@@ -1,0 +1,29 @@
+{
+  "name": "yours-client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.30.1",
+  "engines": {
+    "node": ">=22.12.0 <23"
+  },
+  "scripts": {
+    "build": "pnpm build:cordis",
+    "build:cordis": "tsc -p tsconfig.cordis.json",
+    "check:vendor": "node scripts/check-cordis-vendor.mjs",
+    "test": "pnpm check:vendor && pnpm build:cordis && vitest run",
+    "test:cordis": "vitest run vendor/cordis/packages/core/tests",
+    "demo:cordis": "pnpm build:cordis && node examples/cordis-lifecycle.mjs",
+    "docs:build": "node docs/architecture/handbook/build.mjs",
+    "docs:check": "node docs/architecture/handbook/verify.mjs"
+  },
+  "dependencies": {
+    "cordis": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "25.3.5",
+    "typescript": "5.9.3",
+    "vite": "7.3.2",
+    "vitest": "4.1.5"
+  }
+}
