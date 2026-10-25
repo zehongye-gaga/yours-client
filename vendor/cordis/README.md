@@ -2,7 +2,7 @@
 
 这份源码是 Yours Client 使用的微内核。当前原样引入 Cordis `4.0.0-rc.12` 的 `packages/core`，基于提交 [`35fdc969e4b6c48c48ed44717c7a018324e4dd88`](https://github.com/cordiverse/cordis/tree/35fdc969e4b6c48c48ed44717c7a018324e4dd88)，后续可以直接修改本目录源码。
 
-当前引入 9 个源码文件、17 个测试及测试辅助 TypeScript 文件，连同包描述、README、配置和 MIT 许可证共 36 个上游文件。`UPSTREAM.json` 保留原始来源和文件哈希；当前没有上游源码修改。loader、hmr、include 等其他包尚未引入。
+当前引入 9 个源码文件、17 个测试及测试辅助 TypeScript 文件，连同包描述、README、配置和 MIT 许可证共 36 个上游文件。`UPSTREAM.json` 保留原始来源和文件哈希；当前仅在 Context 构造函数与 RegistryService.plugin() 添加中文阅读注释，不改变执行逻辑；对应本地变更已登记。loader、hmr、include 等其他包尚未引入。
 
 ## 使用
 

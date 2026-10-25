@@ -191,21 +191,31 @@ export class RegistryService {
   }
 
   plugin(plugin: Plugin, config?: any, getOuterStack = buildOuterStack()) {
-    // check if it's a valid plugin
+    // getOuterStack 是读取调用处堆栈的回调，供后续错误诊断使用，不是插件入口。
+    // resolve 只取出函数本身或对象的 apply 方法，并不在这里执行插件。
     const callback = this.resolve(plugin)
     if (!callback) throw new Error('invalid plugin, expect function or object with an "apply" method, received ' + typeof plugin)
+    // assertActive 实际检查父 Fiber 的 uid !== null，并非要求 state === ACTIVE。
     this.ctx.fiber.assertActive()
 
+    // 按函数对象身份复用定义级 runtime，而非按名称；它汇总各次注册的 fibers。
     let runtime = this._internal.get(callback)
     if (!runtime) {
       let name = plugin.name
+      // apply 是常见入口函数名，不把它当成有辨识度的插件显示名。
       if (name === 'apply') name = undefined
+      // name、callback、Config 在首次建立 runtime 时保存，不是每次注册独有的状态。
       runtime = { name, callback, fibers: new DisposableList(), Config: plugin.Config }
       this._internal.set(callback, runtime)
     }
 
+    // 每次注册新建 Fiber：父上下文、当前配置、规范化依赖、共享 runtime、诊断堆栈。
     const fiber = new Fiber(this.ctx, config, Inject.resolve(plugin.inject), runtime, getOuterStack)
+    // 创建以 fiber 为原型的包装对象，不复制字段，也不再构造一个 Fiber。
+    // as 只是编译期类型断言；运行时的 thenable 能力来自下面实际赋值的 then。
     const wrapped = Object.create(fiber) as Fiber & PromiseLike<Fiber>
+    // 自有 then 委托原始 fiber.await() 等待当前加载/卸载稳定；缺依赖时仍可为 PENDING。
+    // await() 返回不带 then 的原始 Fiber，避免 Promise 对同一 thenable 反复吸收。
     wrapped.then = (onFulfilled, onRejected) => {
       return fiber.await().then(onFulfilled, onRejected)
     }

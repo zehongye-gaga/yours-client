@@ -34,17 +34,25 @@ export class Context {
   }
 
   constructor() {
+    // 创建内核环境，而不是注册业务插件；两张无原型表分别保存隔离标识和拦截配置。
+    // isolate 是服务名 → symbol，实际服务实现另存于 reflect.store。
     this[symbols.isolate] = Object.create(null)
     this[symbols.intercept] = Object.create(null)
+    // self 是对当前实例的代理：属性访问由 ReflectService.handler 接管。
     const self = new Proxy<this>(this, ReflectService.handler)
+    // 根引用指向代理；baseUrl 先留空，供需要来源地址的上层逻辑设置。
     this[symbols.root] = self
     this.baseUrl = undefined
+    // runtime 为 null 表示根 Fiber（不是插件实例），承载根上下文的生命周期与副作用。
     this.fiber = new Fiber(self, {}, Object.create(null), null, () => [])
+    // 依次装配反射、插件注册、事件、日志能力，服务内部持有的也是代理 self。
     this.reflect = new ReflectService(self)
     this.registry = new RegistryService(self)
     this.events = new EventsService(self)
     this.logger = new LoggerService(self)
+    // clear() 只取出并移除初始化阶段的清理记录，不调用回调；内建能力仍然保留。
     this.fiber._disposables.clear()
+    // 构造函数显式返回代理，因此 new Context() 得到的是 self，而非裸 this。
     return self
   }
 
