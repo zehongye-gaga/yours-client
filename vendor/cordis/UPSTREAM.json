@@ -6,7 +6,18 @@
   "importedAt": "2026-10-24",
   "license": "MIT",
   "scope": "packages/core plus upstream license and TypeScript configuration references",
-  "sourceModifications": [],
+  "sourceModifications": [
+    {
+      "path": "packages/core/src/context.ts",
+      "sha256": "2d5d0cbcc63578b3be4f7d1f9cb1aee8bad559de01cc76b79e193419397f9deb",
+      "reason": "仅添加中文源码阅读注释，说明 Context 初始化流程；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/registry.ts",
+      "sha256": "f5c2980f0dc1ddbbc8f1e9da28c93ed2261974d41f3403b41566b45d4f45d353",
+      "reason": "仅添加中文源码阅读注释，说明 插件注册、runtime / Fiber 与 thenable 包装；不改变执行逻辑。"
+    }
+  ],
   "files": {
     "LICENSE": {
       "upstreamPath": "LICENSE",
