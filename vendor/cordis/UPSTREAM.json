@@ -9,13 +9,48 @@
   "sourceModifications": [
     {
       "path": "packages/core/src/context.ts",
-      "sha256": "2d5d0cbcc63578b3be4f7d1f9cb1aee8bad559de01cc76b79e193419397f9deb",
-      "reason": "仅添加中文源码阅读注释，说明 Context 初始化流程；不改变执行逻辑。"
+      "sha256": "92c5a857ff4a103c4dd1270e000f8b0df320ecb70788147114e7006528328123",
+      "reason": "仅添加中文源码阅读注释，说明上下文组装、声明合并与局部派生；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/events.ts",
+      "sha256": "1d5985a7cf8cf5f2a1efa4f5ddb26d05e0b2989cad6de44c3fbf360a6aff9a13",
+      "reason": "仅添加中文源码阅读注释，说明监听归属、派发策略与更新钩子；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/fiber.ts",
+      "sha256": "020177eddd93f73c644f56e055c64b29040c2dee15eb540787f79c6a65c54a7a",
+      "reason": "仅添加中文源码阅读注释，说明配置校验、副作用收集、依赖快照与生命周期；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/index.ts",
+      "sha256": "41a76be7dbb8f345ea883ff74ea1573341b489d339cc7d1402cdced28dc8a9b6",
+      "reason": "仅添加中文源码阅读注释，说明包导出与各模块职责；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/logger.ts",
+      "sha256": "614a099ab94ab10f9917449d0015c048c33c19b5a90e1403e00f280953917f20",
+      "reason": "仅添加中文源码阅读注释，说明结构化日志、导出器、格式化与调用上下文；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/reflect.ts",
+      "sha256": "62e023ec3d7d2ffd92c5f56b305ceb836b6169dc7289a1cb96faeb14d2f98423",
+      "reason": "仅添加中文源码阅读注释，说明属性代理、服务所有权、隔离与依赖通知；不改变执行逻辑。"
     },
     {
       "path": "packages/core/src/registry.ts",
-      "sha256": "f5c2980f0dc1ddbbc8f1e9da28c93ed2261974d41f3403b41566b45d4f45d353",
-      "reason": "仅添加中文源码阅读注释，说明 插件注册、runtime / Fiber 与 thenable 包装；不改变执行逻辑。"
+      "sha256": "a9dd868be9847e136931824fc542db326476db84ed6c070b62e6a53a8c5391b5",
+      "reason": "仅添加中文源码阅读注释，说明依赖类型、装饰器、插件注册与 thenable；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/service.ts",
+      "sha256": "9b078271e04071f92cb9db141763e3c35ec578c0f852c251f74b7b2ee5f3b036",
+      "reason": "仅添加中文源码阅读注释，说明服务基类、可调用对象与配置合并；不改变执行逻辑。"
+    },
+    {
+      "path": "packages/core/src/utils.ts",
+      "sha256": "e666810cbbe41c570bfee6ec274faec48ebff172a550b69be3dd934f2cbe3ba9",
+      "reason": "仅添加中文源码阅读注释，说明清理列表、符号、原型、追踪代理与错误堆栈；不改变执行逻辑。"
     }
   ],
   "files": {

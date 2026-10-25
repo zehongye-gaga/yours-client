@@ -1,3 +1,8 @@
+// 本文件把不同形式的插件归一化，再为每次注册建立 Fiber；注册表本身不负责执行插件主体。
+// 上半部是依赖声明、装饰器和 TS 接口，下半部才是 RegistryService 的运行逻辑。
+// 导入用途：Dict/StandardSchemaV1 描述字典与配置校验协议，defineProperty 写内部属性；
+// Context 是能力入口，Fiber 管单次注册，DisposableList 保存实例；其余工具提供符号键、
+// 临时属性视图和错误调用栈。只用到类型的名称不会保留为 JS 导入。
 import { defineProperty, Dict } from 'cosmokit'
 import { StandardSchemaV1 } from '@standard-schema/spec'
 import { Context } from './context.ts'
@@ -5,30 +10,41 @@ import { Fiber } from './fiber.ts'
 import { buildOuterStack, DisposableList, symbols, withProps } from './utils.ts'
 
 function isApplicable(object: Plugin) {
+  // 对象式插件必须有可调用的 apply；这里仅探测形状，不调用 apply。
   return object && typeof object === 'object' && typeof object.apply === 'function'
 }
 
+// 同一个 Inject 名称可同时表示类型和下方的函数。类型层的 | 表示二选一：
+// ['foo'] 声明依赖，{ foo: config } 还携带使用该服务的配置；不是把服务对象直接传进来。
+// keyof M 取键名集合，[K in keyof M] 是映射类型，? 允许各个键省略。
 export type Inject<M = Dict> = (keyof M)[] | { [K in keyof M]?: M[K] }
 
+// 从 Context 的字符串键中筛出带 metadata 类型标记的服务；as ... never 会排除不匹配的键。
+// 这只是静态候选名称，不会在运行时遍历 Context。
 export type InjectKey = keyof {
   [K in keyof Context & string as Context[K] extends { [symbols.metadata]: any } ? K : never]: any
 }
 
 export function Inject<K extends InjectKey>(name: K, config?: Context[K] extends { [symbols.metadata]: infer T } ? T : never) {
+  // @Inject(...) 返回一个装饰器。class 分支改类的静态依赖；method 分支安排实例初始化钩子。
   return function (value: any, decorator: ClassDecoratorContext<any> | ClassMethodDecoratorContext<any>) {
     if (decorator.kind === 'class') {
       if (!Object.hasOwn(value, 'inject')) {
+        // 自己建一层 inject 表，继承父类声明但不直接改父类的表；checkProto 标记允许后面展开它。
         defineProperty(value, 'inject', Object.create(Object.getPrototypeOf(value).inject ?? null))
         defineProperty(value.inject, symbols.checkProto, true)
       }
       value.inject[name] = config
     } else if (decorator.kind === 'method') {
+      // 多个装饰器把依赖累积到原方法上。addInitializer 不在这里调用方法，
+      // 而是在实例初始化时登记 initHooks，随后 Fiber 构造完实例再执行这些钩子。
       const inject = (value[symbols.decorator] ??= {}).inject ??= Object.create(null)
       inject[name] = config
       decorator.addInitializer(function () {
         const property = this[symbols.tracker]?.property
         ;(this[symbols.initHooks] ??= []).push(() => {
           (this.ctx as Context).inject(inject, (ctx) => {
+            // 依赖就绪后才调用方法；临时替换被跟踪的 ctx 字段，让方法的副作用归到子 Fiber。
             return value.call(property ? withProps(this, { [property]: ctx }) : this)
           })
         })
@@ -40,6 +56,8 @@ export function Inject<K extends InjectKey>(name: K, config?: Context[K] extends
 }
 
 export namespace Inject {
+  // namespace 与函数同名合并，运行时因此可调用 Inject.resolve(...)。
+  // 将数组、对象及装饰器继承链归一为无原型字典；null 表示声明了依赖但没有附加配置。
   export function resolve(inject: Inject | null | undefined, result: Dict = Object.create(null)) {
     if (!inject) return result
     if (Array.isArray(inject)) {
@@ -60,6 +78,8 @@ export namespace Inject {
   }
 }
 
+// T 是插件收到的配置类型，占位符会随类型一起擦除；联合类型列出三种入口写法。
+// Plugin namespace 的这些接口只是描述协议，不会替插件生成类或 apply 方法。
 export type Plugin<T = any> =
   | Plugin.Function<T>
   | Plugin.Constructor<T>
@@ -67,6 +87,8 @@ export type Plugin<T = any> =
 
 export namespace Plugin {
   export interface Base<T = any> {
+    // name 用于显示；Config 由 Fiber 校验配置；inject 是依赖，provide/intercept 是可选元信息。
+    // 这里有字段声明，不等于 RegistryService 会自动执行这些字段描述的动作。
     name?: string
     Config?: StandardSchemaV1<any, T>
     inject?: Inject
@@ -75,6 +97,7 @@ export namespace Plugin {
   }
 
   export interface Transform<S, T> {
+    // 这份接口用于下方的输入类型推导；运行时校验仍以 runtime.Config['~standard'] 为准。
     schema?: true
     Config: (config: S) => T
   }
@@ -92,6 +115,7 @@ export namespace Plugin {
   }
 
   export interface Runtime {
+    // 一份插件定义共用一个 runtime：callback 是身份键，fibers 才是多次注册产生的实例列表。
     name?: string
     fibers: DisposableList<Fiber>
     callback: globalThis.Function
@@ -99,6 +123,8 @@ export namespace Plugin {
   }
 }
 
+// 下列类型只改善 plugin(...) 的调用提示：配置包含 undefined 时参数可省略。
+// 元组 [config: T] 表示一段参数列表，infer R 提取入口中 ctx 之后的参数，再取第 0 个作配置。
 type Spread<T> = undefined extends T ? [config?: T] : [config: T]
 
 type GetPluginParameters<P> =
@@ -115,6 +141,8 @@ type GetPluginConfig<P> =
   ? S
   : GetPluginParameters<P>[0]
 
+// 模块补充声明给 Context 加类型；运行时的 ctx.plugin/ctx.inject 转发入口由 ReflectService 安装。
+// & 是交叉类型：返回值同时有 Fiber 接口和可 await 的 then 接口，不是两个返回值。
 declare module './context.ts' {
   export interface Context {
     inject(deps: Inject, callback: Plugin.Function<void>): Fiber & PromiseLike<Fiber>
@@ -123,10 +151,14 @@ declare module './context.ts' {
 }
 
 export class RegistryService {
+  // 一个根环境共用此表；派生 ctx 的 tracker 让调用关联到使用它的上下文，而表仍是同一张。
+  // private 是 TS 访问限制（不同于 JS 的 # 私有字段），_ 前缀本身没有语法上的保护作用。
   private _counter = 0
   private _internal = new Map<Function, Plugin.Runtime>()
 
   constructor(public ctx: Context) {
+    // 参数前 public 会同时声明字段并保存参数。tracker 指定 ctx 随使用位置变化，
+    // noShadow 让内建注册能力直接按使用处归属，无需套普通服务的定义处视图。
     defineProperty(this, symbols.tracker, {
       property: 'ctx',
       noShadow: true,
@@ -134,14 +166,17 @@ export class RegistryService {
   }
 
   get counter() {
+    // getter 看似读属性，实际上每次读取都递增，用来给 Fiber 分配标识。
     return ++this._counter
   }
 
   get size() {
+    // 这是定义数，不是 Fiber 数；同一插件函数可以注册多次。
     return this._internal.size
   }
 
   resolve(plugin: Plugin): Function | undefined {
+    // 函数/类直接作键，对象取其 apply 函数作键；不会按 name 字符串去重。
     // plugin.apply may throw
     try {
       if (typeof plugin === 'function') return plugin
@@ -150,6 +185,7 @@ export class RegistryService {
   }
 
   get(plugin: Plugin) {
+    // get/has 共用 resolve，因此传对象插件或它的 apply 可查到同一个 runtime。
     const key = this.resolve(plugin)
     return key && this._internal.get(key)
   }
@@ -160,6 +196,7 @@ export class RegistryService {
   }
 
   delete(plugin: Plugin) {
+    // 先从表中移除定义，再发起所有实例的 dispose；这里没有 await，不代表清理已经完成。
     const key = this.resolve(plugin)
     const runtime = key && this._internal.get(key)
     if (!runtime) return
@@ -171,6 +208,7 @@ export class RegistryService {
   }
 
   keys() {
+    // 以下四个方法只转发 Map 的遍历能力，values() 遍历的是 runtime 而非单个 Fiber。
     return this._internal.keys()
   }
 
@@ -187,6 +225,7 @@ export class RegistryService {
   }
 
   inject(inject: Inject, callback: Plugin.Function<void>) {
+    // 依赖回调也是一个小插件：依赖出现时运行、消失时清理，复用同一套 Fiber 生命周期。
     return this.plugin({ inject, apply: callback, name: callback.name })
   }
 
