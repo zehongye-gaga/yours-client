@@ -5,23 +5,47 @@
   "type": "module",
   "packageManager": "pnpm@10.30.1",
   "engines": {
-    "node": ">=22.12.0 <23"
+    "node": ">=22.19.0 <23"
   },
   "scripts": {
-    "build": "pnpm build:cordis",
+    "build": "node scripts/build-vendor.mjs",
     "build:cordis": "tsc -p tsconfig.cordis.json",
-    "check:vendor": "node scripts/check-cordis-vendor.mjs",
-    "test": "pnpm check:vendor && pnpm build:cordis && vitest run",
+    "check:vendor": "node scripts/check-vendor.mjs",
+    "test": "pnpm check:vendor && pnpm build && pnpm typecheck:contracts && vitest run",
     "test:cordis": "vitest run vendor/cordis/packages/core/tests",
     "demo:cordis": "pnpm build:cordis && node examples/cordis-lifecycle.mjs",
     "docs:build": "node docs/architecture/handbook/build.mjs",
-    "docs:check": "node docs/architecture/handbook/verify.mjs"
+    "docs:check": "node docs/architecture/handbook/verify.mjs",
+    "test:reuse": "pnpm build && vitest run vendor/deepseek-harness tests/reuse-integration.test.mjs",
+    "demo:reuse": "pnpm build && node examples/reuse-foundation.mjs",
+    "typecheck:contracts": "tsc -p tsconfig.contracts.json"
   },
   "dependencies": {
-    "cordis": "workspace:*"
+    "@cordisjs/plugin-group": "workspace:*",
+    "@cordisjs/plugin-hmr": "workspace:*",
+    "@cordisjs/plugin-include": "workspace:*",
+    "@cordisjs/plugin-loader": "workspace:*",
+    "@cordisjs/plugin-logger-console": "workspace:*",
+    "@cordisjs/plugin-timer": "workspace:*",
+    "@deepseek-ai/dsh-client-store": "workspace:*",
+    "@deepseek-ai/dsh-client-ui-slots": "workspace:*",
+    "@deepseek-ai/dsh-scope": "workspace:*",
+    "@deepseek-ai/dsh-storage": "workspace:*",
+    "@deepseek-ai/dsh-storage-domain": "workspace:*",
+    "@deepseek-ai/dsh-storage-json": "workspace:*",
+    "@deepseek-ai/dsh-storage-sqlite": "workspace:*",
+    "@deepseek-ai/dsh-subprocess": "workspace:*",
+    "@deepseek-ai/dsh-subprocess-local": "workspace:*",
+    "cordis": "workspace:*",
+    "zod": "4.4.3"
   },
   "devDependencies": {
+    "@cordisjs/unyaml": "^2.0.3",
     "@types/node": "25.3.5",
+    "@types/react": "^18.3.0",
+    "esbuild": "0.28.2",
+    "react": "^18.2.0",
+    "tsx": "^4.23.13",
     "typescript": "5.9.3",
     "vite": "7.3.2",
     "vitest": "4.1.5"

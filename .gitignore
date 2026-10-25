@@ -1,5 +1,8 @@
 node_modules/
 vendor/cordis/packages/core/lib/
+vendor/**/lib/
+.build/
+**/.cordis/
 coverage/
 *.tsbuildinfo
 .DS_Store

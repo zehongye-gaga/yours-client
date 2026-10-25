@@ -14,7 +14,12 @@
     "noImplicitThis": false,
     "strictFunctionTypes": false,
     "skipLibCheck": true,
-    "types": ["node"]
+    "types": [
+      "node"
+    ],
+    "preserveConstEnums": true
   },
-  "include": ["vendor/cordis/packages/core/src/**/*.ts"]
+  "include": [
+    "vendor/cordis/packages/core/src/**/*.ts"
+  ]
 }

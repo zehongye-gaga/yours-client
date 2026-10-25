@@ -5,8 +5,14 @@
   "version": "4.0.0-rc.12",
   "importedAt": "2026-10-24",
   "license": "MIT",
-  "scope": "packages/core plus upstream license and TypeScript configuration references",
-  "sourceModifications": [],
+  "scope": "packages/core and six companion plugins (loader, include, group, timer, hmr, logger-console), plus upstream license and TypeScript configuration references",
+  "sourceModifications": [
+    {
+      "path": "packages/hmr/tests/index.spec.ts",
+      "sha256": "312afed7b64aaa35b813a6cd62a4485cb39f955b89c1dd3dcda70ca68b5a3e3f",
+      "reason": "Anchor the standalone HMR test Loader at the fixture module URL; avoid an undefined parent URL when resolving root entries."
+    }
+  ],
   "files": {
     "LICENSE": {
       "upstreamPath": "LICENSE",
@@ -151,7 +157,437 @@
     "tsconfig.json": {
       "upstreamPath": "tsconfig.json",
       "sha256": "660db4b6e995f42bb124de58f26a456e309ec822f31f2c8940a1b8faec53690d"
+    },
+    "packages/loader/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/loader/README.md": {
+      "upstreamPath": "packages/loader/README.md",
+      "sha256": "8ae1e9ed34a7c428d89507263452542e5d8bdcee3947e9e2355aff1a86e3c9d0"
+    },
+    "packages/loader/package.json": {
+      "upstreamPath": "packages/loader/package.json",
+      "sha256": "bd92efe4c1c5b18a229bf363421c5f9a6b061c4f5fb7b9eafde4fbd21e56a7dc"
+    },
+    "packages/loader/src/config/entry.ts": {
+      "upstreamPath": "packages/loader/src/config/entry.ts",
+      "sha256": "82632070c3e69f798a842efa6b38955cc084a12927ec5049ac983096439280ae"
+    },
+    "packages/loader/src/config/group.ts": {
+      "upstreamPath": "packages/loader/src/config/group.ts",
+      "sha256": "7b11b235fba659376637b53938d7ac7e75d13326f0597a4450bfb639899471c1"
+    },
+    "packages/loader/src/config/isolate.ts": {
+      "upstreamPath": "packages/loader/src/config/isolate.ts",
+      "sha256": "40a95cb77cd390c7aba29de1bb2f673a38284148e884a55a2ce7b222673f3abd"
+    },
+    "packages/loader/src/config/tree.ts": {
+      "upstreamPath": "packages/loader/src/config/tree.ts",
+      "sha256": "b480bec81a6c17dba964c89bb1d4b1f3f7957f13873ed2b63e5d0392c6e2f0f1"
+    },
+    "packages/loader/src/config/utils.ts": {
+      "upstreamPath": "packages/loader/src/config/utils.ts",
+      "sha256": "29f3afe4e97dd013566d60ae3644f2b11846719ba3578bad3faff4134439bb2d"
+    },
+    "packages/loader/src/index.ts": {
+      "upstreamPath": "packages/loader/src/index.ts",
+      "sha256": "4497c5c18453c65219b6a13c1a42afb035d638872ba138c40d33a2f032a4ee9c"
+    },
+    "packages/loader/src/internal.ts": {
+      "upstreamPath": "packages/loader/src/internal.ts",
+      "sha256": "2d4ddc8c13068fe98749f7522e88024fcba94f51f3da51c59fe0e43af99b20b7"
+    },
+    "packages/loader/src/resolve.ts": {
+      "upstreamPath": "packages/loader/src/resolve.ts",
+      "sha256": "bf691886f94c38a1f36f3947ee12392f776ca3783af32cda8c5a3d16ff75a30a"
+    },
+    "packages/loader/tests/commit.spec.ts": {
+      "upstreamPath": "packages/loader/tests/commit.spec.ts",
+      "sha256": "fc1b4020793662f91475fd1d029e0b0e9d11554522b7cc1371cf06fc501890bb"
+    },
+    "packages/loader/tests/evaluate.spec.ts": {
+      "upstreamPath": "packages/loader/tests/evaluate.spec.ts",
+      "sha256": "e33df7db0bb78c4b5bc89405f9a17554f622c40cd03bda3943268057de729fd6"
+    },
+    "packages/loader/tests/group.spec.ts": {
+      "upstreamPath": "packages/loader/tests/group.spec.ts",
+      "sha256": "f26efb598255c24c2d004eef05b331d5e52dde6e4ca8775e4f8c34f83d9999d2"
+    },
+    "packages/loader/tests/import.spec.ts": {
+      "upstreamPath": "packages/loader/tests/import.spec.ts",
+      "sha256": "041e3e856be8cd5fb7d0842f89871d31781016068c2de1ba814a686d96eb91c2"
+    },
+    "packages/loader/tests/index.spec.ts": {
+      "upstreamPath": "packages/loader/tests/index.spec.ts",
+      "sha256": "34f81412590f1d8b080e9bed421617faa6c4048c0205ad10b6cdc00defd7c6ad"
+    },
+    "packages/loader/tests/internal.spec.ts": {
+      "upstreamPath": "packages/loader/tests/internal.spec.ts",
+      "sha256": "4e616239c9956183f3e5329c035272f3ce0c7a0b61632d65b897d6d231809b01"
+    },
+    "packages/loader/tests/isolate-provide.spec.ts": {
+      "upstreamPath": "packages/loader/tests/isolate-provide.spec.ts",
+      "sha256": "6e2b8630c6eedd0c4c8b19da46aa2de1407d9995cec0fa0088cdc87a21f155bb"
+    },
+    "packages/loader/tests/isolate.spec.ts": {
+      "upstreamPath": "packages/loader/tests/isolate.spec.ts",
+      "sha256": "d111ac72d6a7e4441b11191e517359c426051099ccf9955367afc4eba35edf79"
+    },
+    "packages/loader/tests/rebuild.spec.ts": {
+      "upstreamPath": "packages/loader/tests/rebuild.spec.ts",
+      "sha256": "03ff4e9cd28832576ad9f0bdf2e68f7dbd7a7d5c08a226ece22143096e650fe9"
+    },
+    "packages/loader/tests/resolve.spec.ts": {
+      "upstreamPath": "packages/loader/tests/resolve.spec.ts",
+      "sha256": "82eac2002a72cb330f800989a849df167fbde812759ee6008b6fab48673dac64"
+    },
+    "packages/loader/tests/tsconfig.json": {
+      "upstreamPath": "packages/loader/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/loader/tests/utils.ts": {
+      "upstreamPath": "packages/loader/tests/utils.ts",
+      "sha256": "c1d03fd7f6808a6f35e82d1f12934b2613692efc87b209c328949e104dd8b161"
+    },
+    "packages/loader/tests/validate.spec.ts": {
+      "upstreamPath": "packages/loader/tests/validate.spec.ts",
+      "sha256": "720dec8ad46a7e9c66e1ee334a05984398a3f106adf8541ec8b9eb0e50e67711"
+    },
+    "packages/loader/tsconfig.json": {
+      "upstreamPath": "packages/loader/tsconfig.json",
+      "sha256": "01c6639cb61786a1822729ed1df53081525a85b5394cc424a00dc45077d75d2b"
+    },
+    "packages/include/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/include/package.json": {
+      "upstreamPath": "packages/include/package.json",
+      "sha256": "ddaebeaa257ac9777697938f1e1d54e70c22b563ed8a5ef5a937295693b5534d"
+    },
+    "packages/include/src/index.ts": {
+      "upstreamPath": "packages/include/src/index.ts",
+      "sha256": "7bada67928a862ccc55091754eae7717db8f2ac737d2849a74c19eca1d709013"
+    },
+    "packages/include/src/journal.ts": {
+      "upstreamPath": "packages/include/src/journal.ts",
+      "sha256": "78ecc1112ddc17e51caa39d5ce55bbc5f1de5a7c7824609a95c8185d195420d4"
+    },
+    "packages/include/src/patch.ts": {
+      "upstreamPath": "packages/include/src/patch.ts",
+      "sha256": "9298dc8d9f152abf3330c15d8817443c77ee428c1f5488cc95df48af05c6bf37"
+    },
+    "packages/include/tests/fixtures/base.yml": {
+      "upstreamPath": "packages/include/tests/fixtures/base.yml",
+      "sha256": "86b3f8f9e218dc85e7b31beb8b5368b15ee654736cc9273c05c529168bb8d200"
+    },
+    "packages/include/tests/fixtures/config-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/config-plugin.ts",
+      "sha256": "4aa36bf1f49512c36f071b39ed931ad016659053ef509d9ad18b576e53802e77"
+    },
+    "packages/include/tests/fixtures/extra-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/extra-plugin.ts",
+      "sha256": "ec9a1c93ff9cef1f98e95077b410e852acc9019c47a05913bebb109e61f04ebc"
+    },
+    "packages/include/tests/fixtures/missing-dep-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/missing-dep-plugin.ts",
+      "sha256": "797643bd0152da878bd321827d44c80c83c968561f3fbb11b4f9a28f6c6a48df"
+    },
+    "packages/include/tests/fixtures/schema-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/schema-plugin.ts",
+      "sha256": "852074cc44d910578a750d32c7c08a8a05ecf2a908c71ddde2d217564859e594"
+    },
+    "packages/include/tests/fixtures/test-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/test-plugin.ts",
+      "sha256": "1f2a9bffbb1b111fa53b4c358be41af0f9626d3b7ea253650979da8df22a87f7"
+    },
+    "packages/include/tests/fixtures/throw-plugin.ts": {
+      "upstreamPath": "packages/include/tests/fixtures/throw-plugin.ts",
+      "sha256": "a17b8ab5486d88cd2df63f6ca751471d278a372f5ab194fcd88a3fcb89018d7d"
+    },
+    "packages/include/tests/location.spec.ts": {
+      "upstreamPath": "packages/include/tests/location.spec.ts",
+      "sha256": "cb3b2f38c8db580d7f473d9062914eff2e3ac1bbc811d09dc4acb99ae08beb42"
+    },
+    "packages/include/tests/parse.spec.ts": {
+      "upstreamPath": "packages/include/tests/parse.spec.ts",
+      "sha256": "9c5ce77d567da397f9b092caba3083d7729cd3f743281b90daba98bb59178de8"
+    },
+    "packages/include/tests/patch.spec.ts": {
+      "upstreamPath": "packages/include/tests/patch.spec.ts",
+      "sha256": "57f4a1fd6d07cf75c610dabb66b564039e072deafba7c42594b359bfc5db480c"
+    },
+    "packages/include/tests/path.spec.ts": {
+      "upstreamPath": "packages/include/tests/path.spec.ts",
+      "sha256": "1988d74bff1a6bebbd1c97de8cdcdd880a88a09ffd92d4ee6a92b34c1f7af0c7"
+    },
+    "packages/include/tests/reload.spec.ts": {
+      "upstreamPath": "packages/include/tests/reload.spec.ts",
+      "sha256": "5b388346ffee2a7052dc353b8d2f9af04111d83afcb61693bf3bbc5bb80a0469"
+    },
+    "packages/include/tests/sync.spec.ts": {
+      "upstreamPath": "packages/include/tests/sync.spec.ts",
+      "sha256": "e22c286cc3632ca2fc62c903d9dd2ce7a6d82adfa2d55a9071d8a6d59933409a"
+    },
+    "packages/include/tests/tsconfig.json": {
+      "upstreamPath": "packages/include/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/include/tests/utils.ts": {
+      "upstreamPath": "packages/include/tests/utils.ts",
+      "sha256": "afb205202f13878bf668d3136c2a746d1a976a8aa12e95926ea6d020682b97e6"
+    },
+    "packages/include/tests/write.spec.ts": {
+      "upstreamPath": "packages/include/tests/write.spec.ts",
+      "sha256": "f730865ea2c60948cc733a959a86e09853b9f994ae7fec04d417e9435ee15657"
+    },
+    "packages/include/tsconfig.json": {
+      "upstreamPath": "packages/include/tsconfig.json",
+      "sha256": "3edb6d555481737a01d66b3e9bdc0e9ed7ec035e79b70c63586a8432a52a79de"
+    },
+    "packages/group/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/group/package.json": {
+      "upstreamPath": "packages/group/package.json",
+      "sha256": "9d06f3544bd2cdb53d33a91446c5f630bbf9033f5e9d9338293b2ff9c3e46c5e"
+    },
+    "packages/group/src/index.ts": {
+      "upstreamPath": "packages/group/src/index.ts",
+      "sha256": "fbbf8e8fe04056873360442127086dd9893da96ef9a608c2a531974ae2ce367e"
+    },
+    "packages/group/tsconfig.json": {
+      "upstreamPath": "packages/group/tsconfig.json",
+      "sha256": "3edb6d555481737a01d66b3e9bdc0e9ed7ec035e79b70c63586a8432a52a79de"
+    },
+    "packages/timer/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/timer/package.json": {
+      "upstreamPath": "packages/timer/package.json",
+      "sha256": "69e558d8bb1eec8a9909231412ce15cec1018fabc6ec4d79094181e5f5b897f1"
+    },
+    "packages/timer/src/index.ts": {
+      "upstreamPath": "packages/timer/src/index.ts",
+      "sha256": "85b7a2b85ff733c2d9125e7ad8b8ed94f965abcd0c2a6c5bd5492fd82b444674"
+    },
+    "packages/timer/tests/index.spec.ts": {
+      "upstreamPath": "packages/timer/tests/index.spec.ts",
+      "sha256": "642f2bdb26ba3fe448af453516ec653c65d862fdd60fb4b5b4e5c56b5cc4868b"
+    },
+    "packages/timer/tests/tsconfig.json": {
+      "upstreamPath": "packages/timer/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/timer/tsconfig.json": {
+      "upstreamPath": "packages/timer/tsconfig.json",
+      "sha256": "3edb6d555481737a01d66b3e9bdc0e9ed7ec035e79b70c63586a8432a52a79de"
+    },
+    "packages/hmr/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/hmr/README.md": {
+      "upstreamPath": "packages/hmr/README.md",
+      "sha256": "7128f0efaa324174a1c655fa4d21c0b54efd403e7effba7e5d27c5cd2eeba0b1"
+    },
+    "packages/hmr/package.json": {
+      "upstreamPath": "packages/hmr/package.json",
+      "sha256": "1c621aff1867b185a2d41155521361c064fdec6ffa9e002d6337e18b1f1a06aa"
+    },
+    "packages/hmr/src/error.ts": {
+      "upstreamPath": "packages/hmr/src/error.ts",
+      "sha256": "1c99f0394be9f69a730c8039970d426322ba252ed01158090bb72367e82f42e0"
+    },
+    "packages/hmr/src/index.ts": {
+      "upstreamPath": "packages/hmr/src/index.ts",
+      "sha256": "acf3f10e28254c5d7d17cb29ebf06eb23b352316232970778059dc35e4462972"
+    },
+    "packages/hmr/src/locales/en-US.yml": {
+      "upstreamPath": "packages/hmr/src/locales/en-US.yml",
+      "sha256": "cc2c4cfcce2940d6e6986146f5a4d09ebbe27e7465ff62ab5e3120da999517d2"
+    },
+    "packages/hmr/src/locales/zh-CN.yml": {
+      "upstreamPath": "packages/hmr/src/locales/zh-CN.yml",
+      "sha256": "173d18a21556da099cd70ab123cf7390901f737db3b2c7d095b2cb9cc1e66568"
+    },
+    "packages/hmr/tests/cordis-dep.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-dep.yml",
+      "sha256": "9b8bad3259728ea537d7ee7f39412abd10a5669d5cb838b543799eccea0864f0"
+    },
+    "packages/hmr/tests/cordis-disabled.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-disabled.yml",
+      "sha256": "ecf715c5b537fa0d3a19e2f19610ded5254bdbc1158cae7b2fe0c6637557e1c6"
+    },
+    "packages/hmr/tests/cordis-drain.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-drain.yml",
+      "sha256": "ca1ffdde588db5379447a67d41561fabddc8221af1f58cfe0e0bfd248c512e76"
+    },
+    "packages/hmr/tests/cordis-error.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-error.yml",
+      "sha256": "f581979fe8f3054cfc677d640dc78d9748b7e46e9570623c8b9fab7610bd7c12"
+    },
+    "packages/hmr/tests/cordis-event.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-event.yml",
+      "sha256": "cf967c480a606d836c814b5d81c6651c06392595da02b2834c2be999a81d6961"
+    },
+    "packages/hmr/tests/cordis-multi-entry.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-multi-entry.yml",
+      "sha256": "492050fe0d4a78f43c0b881e496a202fa172d19acf3bce08498c30586e397d23"
+    },
+    "packages/hmr/tests/cordis-multi.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-multi.yml",
+      "sha256": "e9c236d7c68726a09bd965e66b91476d90d19036976e40f62df107f6ccf1ad52"
+    },
+    "packages/hmr/tests/cordis-nested.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-nested.yml",
+      "sha256": "0452179e6f92f8fc8b5abec0035a34151eea48a9594f2166788cf58aa2cbea61"
+    },
+    "packages/hmr/tests/cordis-no-internal.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis-no-internal.yml",
+      "sha256": "82c98cd5c5ae7464e3efb15d62e983f2dc8aa161f031f949c3472b368d4c8e28"
+    },
+    "packages/hmr/tests/cordis.yml": {
+      "upstreamPath": "packages/hmr/tests/cordis.yml",
+      "sha256": "941302b9de00fadc6caaa12caff877f35d2763fa606aeac658fcbdd3b40b6ad6"
+    },
+    "packages/hmr/tests/dep-common.ts": {
+      "upstreamPath": "packages/hmr/tests/dep-common.ts",
+      "sha256": "451f0dfb18a76938498037388e770035bbd131a1ca0e20045ae44d4e6c413fd5"
+    },
+    "packages/hmr/tests/dep.ts": {
+      "upstreamPath": "packages/hmr/tests/dep.ts",
+      "sha256": "9184a588e2c6984358197dfb671b2f6ad0e9461c90eef80dcd64c105cc661d4f"
+    },
+    "packages/hmr/tests/drain-dep.ts": {
+      "upstreamPath": "packages/hmr/tests/drain-dep.ts",
+      "sha256": "abc51cc0b246a7757927e8e0887c2c49a9233cdae74978f0f1bf2fd8dedcb7d8"
+    },
+    "packages/hmr/tests/index.spec.ts": {
+      "upstreamPath": "packages/hmr/tests/index.spec.ts",
+      "sha256": "8125691252ecd746ad0e97c113951bd3a71e81db348c0acf61a54283754e51bf"
+    },
+    "packages/hmr/tests/path.spec.ts": {
+      "upstreamPath": "packages/hmr/tests/path.spec.ts",
+      "sha256": "602c8ee238567686bf56c36ec973597b687e8e60b337ea6ed07a6c8d7beff875"
+    },
+    "packages/hmr/tests/plugin-a.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-a.ts",
+      "sha256": "91177485f056e3d6ce0d47b9881cedcda68540ab638d0a0bb97e24075adf425a"
+    },
+    "packages/hmr/tests/plugin-b.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-b.ts",
+      "sha256": "d45a52675eea2be6c1d1afadd4379ae7eff2b984b145cda9cd5f1c794739e7cf"
+    },
+    "packages/hmr/tests/plugin-config.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-config.ts",
+      "sha256": "54cc073c73cf379bf3ea4b9d893399d100460051cc3c3cf37e9358c7efb73d6a"
+    },
+    "packages/hmr/tests/plugin-dep-sibling.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-dep-sibling.ts",
+      "sha256": "f670885f1f55276b4353dab6060e08654cdbe4fee5ee39a393a2ac82e025f52a"
+    },
+    "packages/hmr/tests/plugin-dep.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-dep.ts",
+      "sha256": "aaa105ff2f67f3eaee988df586ebd87503cb6891b5a435127d7a4be5160414b2"
+    },
+    "packages/hmr/tests/plugin-disabled-hmr.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-disabled-hmr.ts",
+      "sha256": "6a6651236b5a914dca502ee3dae310dddb5f47c0a91d7fbdaa803e11a8a1347e"
+    },
+    "packages/hmr/tests/plugin-error.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-error.ts",
+      "sha256": "c15ae411bb3bd3bf67ca46fafdf3de6ebb2aa31af8d4c273a364aec01442f51d"
+    },
+    "packages/hmr/tests/plugin-event.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-event.ts",
+      "sha256": "9293ea3029a9b887e52982ee63f1081a3a502008cf0495df56cc4d076bb4b709"
+    },
+    "packages/hmr/tests/plugin-fast.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-fast.ts",
+      "sha256": "ab5d84e5df14c9091598cf4504f060e932fc0ccff4350383cbddb9c7bdc48a9c"
+    },
+    "packages/hmr/tests/plugin-host.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-host.ts",
+      "sha256": "01fb4d39f89649ee0ce22afdce46c17e9f3921ac89d6cb832be9d9ba31049e98"
+    },
+    "packages/hmr/tests/plugin-multi.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-multi.ts",
+      "sha256": "9a87b34ee7ae372e6027d1aa1fac4ddc64aa7aaa9dc2412989dd1948be2104e7"
+    },
+    "packages/hmr/tests/plugin-nested.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-nested.ts",
+      "sha256": "3fa63b7a9a08b7d1a8fef5907383239db4ba231a3db6ea94e93e7830685ab8a3"
+    },
+    "packages/hmr/tests/plugin-slow.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-slow.ts",
+      "sha256": "bfb8557ad35af5742bbf4bf3eeaf925f8a6a007dcdaa5195bc8b7571b4237bb1"
+    },
+    "packages/hmr/tests/plugin-tree.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin-tree.ts",
+      "sha256": "abfdff1f1ab81a25b82654b2490c282d0b5d6da8c8af1d7b85835bf2e3ca5cec"
+    },
+    "packages/hmr/tests/plugin.ts": {
+      "upstreamPath": "packages/hmr/tests/plugin.ts",
+      "sha256": "f2c1820bcd9aaac153e58b6485da055f9a79904d46a4ebc9cbfd74a4ffcff488"
+    },
+    "packages/hmr/tests/tree-dep.ts": {
+      "upstreamPath": "packages/hmr/tests/tree-dep.ts",
+      "sha256": "2094583d59dbd35ceeda9ccf1cfaf8404d577da91e2b87e8e22c55a596688056"
+    },
+    "packages/hmr/tests/tsconfig.json": {
+      "upstreamPath": "packages/hmr/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/hmr/tsconfig.json": {
+      "upstreamPath": "packages/hmr/tsconfig.json",
+      "sha256": "d6588fc8f09e686f696ef9b8b6292bb1338d5778b05a4752df75cad2b5330405"
+    },
+    "packages/logger-console/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "034fb52b1d57360ecbae6cb1632a88f86fd7c3d3f5631a5f082710203dda0be7"
+    },
+    "packages/logger-console/package.json": {
+      "upstreamPath": "packages/logger-console/package.json",
+      "sha256": "5331190cbc4fa0d5d38b4f3f6341e666f8cce9d78095661032f64a8bfee90723"
+    },
+    "packages/logger-console/src/browser.ts": {
+      "upstreamPath": "packages/logger-console/src/browser.ts",
+      "sha256": "0b406ea7e559b001293ae2e8e1481a28d3fa0d6bd961da1bec00921b4da0a5e9"
+    },
+    "packages/logger-console/src/index.ts": {
+      "upstreamPath": "packages/logger-console/src/index.ts",
+      "sha256": "a03ac71279bf514ed1ebebcee4c7caf42f256f88788f61d4498af701357d28c9"
+    },
+    "packages/logger-console/src/shared.ts": {
+      "upstreamPath": "packages/logger-console/src/shared.ts",
+      "sha256": "469dd48f3ce8832cd941a225e8505de428a5fcc2971e5dc1f866fea83cc88a73"
+    },
+    "packages/logger-console/tests/index.spec.ts": {
+      "upstreamPath": "packages/logger-console/tests/index.spec.ts",
+      "sha256": "b0541691ab3070224265f3f7e0384e0dbde6ab400bb608c344790e17cdfb3798"
+    },
+    "packages/logger-console/tests/tsconfig.json": {
+      "upstreamPath": "packages/logger-console/tests/tsconfig.json",
+      "sha256": "551953ddbf04b7fab6d8f3e53d1d4cd7c40faf2a942ccef9e00652b814750172"
+    },
+    "packages/logger-console/tsconfig.json": {
+      "upstreamPath": "packages/logger-console/tsconfig.json",
+      "sha256": "3edb6d555481737a01d66b3e9bdc0e9ed7ec035e79b70c63586a8432a52a79de"
     }
   },
-  "localFork": true
+  "localFork": true,
+  "companionsImportedAt": "2026-10-25",
+  "packages": [
+    "cordis",
+    "@cordisjs/plugin-group",
+    "@cordisjs/plugin-hmr",
+    "@cordisjs/plugin-include",
+    "@cordisjs/plugin-loader",
+    "@cordisjs/plugin-logger-console",
+    "@cordisjs/plugin-timer"
+  ]
 }
