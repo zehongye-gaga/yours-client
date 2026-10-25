@@ -1,0 +1,184 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "vendor",
+    "outDir": ".build/vendor",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "rewriteRelativeImportExtensions": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictFunctionTypes": false,
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "react",
+      "@cordisjs/unyaml/types"
+    ],
+    "paths": {
+      "cordis": [
+        "./vendor/cordis/packages/core/src/index.ts"
+      ],
+      "cordis/src/*": [
+        "./vendor/cordis/packages/core/src/*"
+      ],
+      "@cordisjs/plugin-group": [
+        "./vendor/cordis/packages/group/src/index.ts"
+      ],
+      "@cordisjs/plugin-group/src/*": [
+        "./vendor/cordis/packages/group/src/*"
+      ],
+      "@cordisjs/plugin-hmr": [
+        "./vendor/cordis/packages/hmr/src/index.ts"
+      ],
+      "@cordisjs/plugin-hmr/src/*": [
+        "./vendor/cordis/packages/hmr/src/*"
+      ],
+      "@cordisjs/plugin-include": [
+        "./vendor/cordis/packages/include/src/index.ts"
+      ],
+      "@cordisjs/plugin-include/src/*": [
+        "./vendor/cordis/packages/include/src/*"
+      ],
+      "@cordisjs/plugin-loader": [
+        "./vendor/cordis/packages/loader/src/index.ts"
+      ],
+      "@cordisjs/plugin-loader/src/*": [
+        "./vendor/cordis/packages/loader/src/*"
+      ],
+      "@cordisjs/plugin-logger-console": [
+        "./vendor/cordis/packages/logger-console/src/index.ts"
+      ],
+      "@cordisjs/plugin-logger-console/src/*": [
+        "./vendor/cordis/packages/logger-console/src/*"
+      ],
+      "@cordisjs/plugin-timer": [
+        "./vendor/cordis/packages/timer/src/index.ts"
+      ],
+      "@cordisjs/plugin-timer/src/*": [
+        "./vendor/cordis/packages/timer/src/*"
+      ],
+      "@deepseek-ai/dsh-client-store": [
+        "./vendor/deepseek-harness/packages/client/store/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-client-store/src/*": [
+        "./vendor/deepseek-harness/packages/client/store/src/*"
+      ],
+      "@deepseek-ai/dsh-client-ui-slots": [
+        "./vendor/deepseek-harness/packages/client/ui-slots/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-client-ui-slots/src/*": [
+        "./vendor/deepseek-harness/packages/client/ui-slots/src/*"
+      ],
+      "@deepseek-ai/dsh-scope": [
+        "./vendor/deepseek-harness/packages/core/scope/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-scope/src/*": [
+        "./vendor/deepseek-harness/packages/core/scope/src/*"
+      ],
+      "@deepseek-ai/dsh-storage": [
+        "./vendor/deepseek-harness/packages/storage/storage/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-storage/src/*": [
+        "./vendor/deepseek-harness/packages/storage/storage/src/*"
+      ],
+      "@deepseek-ai/dsh-storage-domain": [
+        "./vendor/deepseek-harness/packages/storage/storage-domain/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-storage-domain/src/*": [
+        "./vendor/deepseek-harness/packages/storage/storage-domain/src/*"
+      ],
+      "@deepseek-ai/dsh-storage-json": [
+        "./vendor/deepseek-harness/packages/storage/storage-json/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-storage-json/src/*": [
+        "./vendor/deepseek-harness/packages/storage/storage-json/src/*"
+      ],
+      "@deepseek-ai/dsh-storage-sqlite": [
+        "./vendor/deepseek-harness/packages/storage/storage-sqlite/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-storage-sqlite/src/*": [
+        "./vendor/deepseek-harness/packages/storage/storage-sqlite/src/*"
+      ],
+      "@deepseek-ai/dsh-subprocess": [
+        "./vendor/deepseek-harness/packages/subprocess/subprocess/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-subprocess/src/*": [
+        "./vendor/deepseek-harness/packages/subprocess/subprocess/src/*"
+      ],
+      "@deepseek-ai/dsh-subprocess/control": [
+        "./vendor/deepseek-harness/packages/subprocess/subprocess/src/control.ts"
+      ],
+      "@deepseek-ai/dsh-subprocess-local": [
+        "./vendor/deepseek-harness/packages/subprocess/subprocess-local/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-subprocess-local/src/*": [
+        "./vendor/deepseek-harness/packages/subprocess/subprocess-local/src/*"
+      ],
+      "@deepseek-ai/dsh-win32-process": [
+        "./vendor/deepseek-harness/packages/subprocess/win32-process/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-win32-process/src/*": [
+        "./vendor/deepseek-harness/packages/subprocess/win32-process/src/*"
+      ],
+      "@deepseek-ai/dsh-http-proxy": [
+        "./vendor/deepseek-harness/packages/util/http-proxy/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-http-proxy/src/*": [
+        "./vendor/deepseek-harness/packages/util/http-proxy/src/*"
+      ],
+      "@deepseek-ai/dsh-launch-environment": [
+        "./vendor/deepseek-harness/packages/util/launch-environment/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-launch-environment/src/*": [
+        "./vendor/deepseek-harness/packages/util/launch-environment/src/*"
+      ],
+      "@deepseek-ai/dsh-lazy-require": [
+        "./vendor/deepseek-harness/packages/util/lazy-require/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-lazy-require/src/*": [
+        "./vendor/deepseek-harness/packages/util/lazy-require/src/*"
+      ],
+      "@deepseek-ai/dsh-timeout": [
+        "./vendor/deepseek-harness/packages/util/timeout/src/index.ts"
+      ],
+      "@deepseek-ai/dsh-timeout/src/*": [
+        "./vendor/deepseek-harness/packages/util/timeout/src/*"
+      ]
+    },
+    "lib": [
+      "ES2024",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "noEmitOnError": true,
+    "preserveConstEnums": true
+  },
+  "include": [
+    "vendor/cordis/packages/core/src/**/*.ts",
+    "vendor/cordis/packages/group/src/**/*.ts",
+    "vendor/cordis/packages/hmr/src/**/*.ts",
+    "vendor/cordis/packages/include/src/**/*.ts",
+    "vendor/cordis/packages/loader/src/**/*.ts",
+    "vendor/cordis/packages/logger-console/src/**/*.ts",
+    "vendor/cordis/packages/timer/src/**/*.ts",
+    "vendor/deepseek-harness/packages/client/store/src/**/*.ts",
+    "vendor/deepseek-harness/packages/client/ui-slots/src/**/*.ts",
+    "vendor/deepseek-harness/packages/core/scope/src/**/*.ts",
+    "vendor/deepseek-harness/packages/storage/storage/src/**/*.ts",
+    "vendor/deepseek-harness/packages/storage/storage-domain/src/**/*.ts",
+    "vendor/deepseek-harness/packages/storage/storage-json/src/**/*.ts",
+    "vendor/deepseek-harness/packages/storage/storage-sqlite/src/**/*.ts",
+    "vendor/deepseek-harness/packages/subprocess/subprocess/src/**/*.ts",
+    "vendor/deepseek-harness/packages/subprocess/subprocess-local/src/**/*.ts",
+    "vendor/deepseek-harness/packages/subprocess/win32-process/src/**/*.ts",
+    "vendor/deepseek-harness/packages/util/http-proxy/src/**/*.ts",
+    "vendor/deepseek-harness/packages/util/launch-environment/src/**/*.ts",
+    "vendor/deepseek-harness/packages/util/lazy-require/src/**/*.ts",
+    "vendor/deepseek-harness/packages/util/timeout/src/**/*.ts"
+  ]
+}

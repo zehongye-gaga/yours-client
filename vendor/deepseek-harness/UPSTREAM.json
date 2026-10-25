@@ -1,0 +1,1290 @@
+{
+  "repository": "https://github.com/deepseek-ai/deepseek-harness",
+  "commit": "22ddee3792402c3e70ec5f86a63c3e3e895a2f60",
+  "version": "0.2.1-rc.3",
+  "importedAt": "2026-10-25",
+  "license": "MIT",
+  "localFork": true,
+  "packages": [
+    "packages/storage/storage",
+    "packages/storage/storage-json",
+    "packages/storage/storage-sqlite",
+    "packages/storage/storage-domain",
+    "packages/core/scope",
+    "packages/client/store",
+    "packages/client/ui-slots",
+    "packages/subprocess/subprocess",
+    "packages/subprocess/subprocess-local"
+  ],
+  "supportPackages": [
+    "packages/util/http-proxy",
+    "packages/util/launch-environment",
+    "packages/util/lazy-require",
+    "packages/util/timeout",
+    "packages/subprocess/win32-process"
+  ],
+  "files": {
+    "LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/client/store/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/client/store/README.i18n.yaml": {
+      "upstreamPath": "packages/client/store/README.i18n.yaml",
+      "sha256": "4b7f7ea2e87c568ec34d1660d776c43619118199767f570fcbbbf15915839fdf"
+    },
+    "packages/client/store/README.md": {
+      "upstreamPath": "packages/client/store/README.md",
+      "sha256": "1ae4f1a0a0934098a4bf51b9c8676e504d55ab292510b6282adc52b43fd2b852"
+    },
+    "packages/client/store/README.zh.md": {
+      "upstreamPath": "packages/client/store/README.zh.md",
+      "sha256": "e2628714b24281d2f1402df9f13bd827b518692ed8854d494b10c7b44663cd18"
+    },
+    "packages/client/store/package.json": {
+      "upstreamPath": "packages/client/store/package.json",
+      "sha256": "e837cfe7cb55c7787a395d12023803b5a7a4aa15833ac15784d7e9ddac239253"
+    },
+    "packages/client/store/src/contract.ts": {
+      "upstreamPath": "packages/client/store/src/contract.ts",
+      "sha256": "d4ba75c2559f22713f1f3659d03fce6cf17b6f1c1fe82a9615b71f6a504e9e81"
+    },
+    "packages/client/store/src/index.ts": {
+      "upstreamPath": "packages/client/store/src/index.ts",
+      "sha256": "6969ed123830868c44d90b664cd40d81d4f6a8fd18245a695fdc3cca38c9da08"
+    },
+    "packages/client/store/tests/store.client.spec.ts": {
+      "upstreamPath": "packages/client/store/tests/store.client.spec.ts",
+      "sha256": "4d4ac8414d603f603e2004b2018549d9d03a90d09e59505ad5450a4786db755d"
+    },
+    "packages/client/store/tsconfig.json": {
+      "upstreamPath": "packages/client/store/tsconfig.json",
+      "sha256": "c468dcada413a8142a31bdc33720a21c709d9a1ee9cddb851ec0f9d36d4047d5"
+    },
+    "packages/client/store/tsdown.config.ts": {
+      "upstreamPath": "packages/client/store/tsdown.config.ts",
+      "sha256": "42604c814f8e74f711ffaba697fef15324ab97ae47725e80a567950d35e3ee51"
+    },
+    "packages/client/ui-slots/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/client/ui-slots/README.i18n.yaml": {
+      "upstreamPath": "packages/client/ui-slots/README.i18n.yaml",
+      "sha256": "9f7f95d8db57b77eb76093d5feac7e55bd09d77bd2d35c16ae1ad780a7dc8ea4"
+    },
+    "packages/client/ui-slots/README.md": {
+      "upstreamPath": "packages/client/ui-slots/README.md",
+      "sha256": "2d0b5c390ae9553aa1804de8b3d9c43501ee47010b2986ad7d5b5090ff688c23"
+    },
+    "packages/client/ui-slots/README.zh.md": {
+      "upstreamPath": "packages/client/ui-slots/README.zh.md",
+      "sha256": "c257c13c0edc4d0963487a1ef75a357998a38b6ae41781549e28d5958c3b6a07"
+    },
+    "packages/client/ui-slots/package.json": {
+      "upstreamPath": "packages/client/ui-slots/package.json",
+      "sha256": "2775c52af54359733f249d4ce7275236f676986278abefaf60bee8fbdd2ce363"
+    },
+    "packages/client/ui-slots/src/index.ts": {
+      "upstreamPath": "packages/client/ui-slots/src/index.ts",
+      "sha256": "43989fb355e1e85316caa70b28de3294f9d6e7b179199a4e429dcd1ef73f2e24"
+    },
+    "packages/client/ui-slots/src/renderer.ts": {
+      "upstreamPath": "packages/client/ui-slots/src/renderer.ts",
+      "sha256": "43ba3492fff724ffbe71d0b4bcfca410ab695d019aa2e163d2c8dd56cab1a849"
+    },
+    "packages/client/ui-slots/src/store.ts": {
+      "upstreamPath": "packages/client/ui-slots/src/store.ts",
+      "sha256": "4233ae32911848aa771910286e5f41b4c683e8c5b16da190935082ac4249cca0"
+    },
+    "packages/client/ui-slots/tests/core.client.spec.ts": {
+      "upstreamPath": "packages/client/ui-slots/tests/core.client.spec.ts",
+      "sha256": "2963fd108c55f88f182151bd40d5c95701900daf94c4e2b09c1829bb3648fb9c"
+    },
+    "packages/client/ui-slots/tests/dynamic-keys.client.spec.ts": {
+      "upstreamPath": "packages/client/ui-slots/tests/dynamic-keys.client.spec.ts",
+      "sha256": "0b5e9e56cb2bf0531fca18fe4e14a2bc5a16708bab4451f333bae6d7a7ecb1cf"
+    },
+    "packages/client/ui-slots/tests/type-chain.client.spec.tsx": {
+      "upstreamPath": "packages/client/ui-slots/tests/type-chain.client.spec.tsx",
+      "sha256": "cce8a0882cc3fabebd0bebb81b845bb7e04713e4931b3b738c3500ee384e612f"
+    },
+    "packages/client/ui-slots/tsconfig.json": {
+      "upstreamPath": "packages/client/ui-slots/tsconfig.json",
+      "sha256": "20dd9e91da16d5ee9e2f3756a98aea6caed11a28a8b4c49b82a5145f8560c530"
+    },
+    "packages/client/ui-slots/tsdown.config.ts": {
+      "upstreamPath": "packages/client/ui-slots/tsdown.config.ts",
+      "sha256": "42604c814f8e74f711ffaba697fef15324ab97ae47725e80a567950d35e3ee51"
+    },
+    "packages/core/scope/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/core/scope/README.i18n.yaml": {
+      "upstreamPath": "packages/core/scope/README.i18n.yaml",
+      "sha256": "7d4492b76760378adf6b0c6e609ceca12a8ff6a074588c3c045cd33dd27b88fd"
+    },
+    "packages/core/scope/README.md": {
+      "upstreamPath": "packages/core/scope/README.md",
+      "sha256": "a78f5ea99004e168a32e096b06d45c661736828c414123eba7f6104b55d64280"
+    },
+    "packages/core/scope/README.zh.md": {
+      "upstreamPath": "packages/core/scope/README.zh.md",
+      "sha256": "78012222db4f96c7b5b7446964d31745d5dcd32ab844c9af3a832cb8db9a0288"
+    },
+    "packages/core/scope/package.json": {
+      "upstreamPath": "packages/core/scope/package.json",
+      "sha256": "d911095617317ce33a5233010b39260717b79e2ce2965ab2db5a9e3317a48bf9"
+    },
+    "packages/core/scope/src/index.ts": {
+      "upstreamPath": "packages/core/scope/src/index.ts",
+      "sha256": "074b8f0c3fa2e240effd0a7e65c54be7c14debc1e53bb712334ce20d15affe4a"
+    },
+    "packages/core/scope/src/store.ts": {
+      "upstreamPath": "packages/core/scope/src/store.ts",
+      "sha256": "e2f6c98e271cbae483393ccd1e5212a255def165a8a591d308efbd827af67278"
+    },
+    "packages/core/scope/tests/scope.spec.ts": {
+      "upstreamPath": "packages/core/scope/tests/scope.spec.ts",
+      "sha256": "491dc7c01521e78cd29d19d5762d3460af40dc67aa3ee68cb0480fae10454095"
+    },
+    "packages/core/scope/tests/store.spec.ts": {
+      "upstreamPath": "packages/core/scope/tests/store.spec.ts",
+      "sha256": "3c1e5e3ff4ba50445d140aa0f09dc1e6c5e80cf6244fce628841bdc4e8029ad5"
+    },
+    "packages/core/scope/tsconfig.json": {
+      "upstreamPath": "packages/core/scope/tsconfig.json",
+      "sha256": "33862d7bd979a1b1f2559a5c81f248ffd72f822bbb3cd7e4a045858a2f14c1fa"
+    },
+    "packages/core/scope/tsdown.config.ts": {
+      "upstreamPath": "packages/core/scope/tsdown.config.ts",
+      "sha256": "4b8cdb973c4a15428b72c010024510b76bae3211a620fc5cd726b75e1aaf91f1"
+    },
+    "packages/storage/storage/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/storage/storage/README.i18n.yaml": {
+      "upstreamPath": "packages/storage/storage/README.i18n.yaml",
+      "sha256": "2e17ff634c9b06cc04192b7815cb06fd9f7951fbf388c4505bab5b86db082320"
+    },
+    "packages/storage/storage/README.md": {
+      "upstreamPath": "packages/storage/storage/README.md",
+      "sha256": "559933fd800daf5db2c031f6d4135082b0c23fe42aae3c2d3addc7bf8aeaf0cb"
+    },
+    "packages/storage/storage/README.zh.md": {
+      "upstreamPath": "packages/storage/storage/README.zh.md",
+      "sha256": "af72550cd9b0ad1377772462ac480074cadf3ef82f44af1aa712b1b82b4a5b05"
+    },
+    "packages/storage/storage/locale/de.json": {
+      "upstreamPath": "packages/storage/storage/locale/de.json",
+      "sha256": "ab88e3f7c8eae82d24ce9a746bbc910b26fd8f2897dea0b73fc504cda348935e"
+    },
+    "packages/storage/storage/locale/en.json": {
+      "upstreamPath": "packages/storage/storage/locale/en.json",
+      "sha256": "2b20cd8778501ad6ac1885e985ac1d105be06512327c6857b8e221f6269ba65f"
+    },
+    "packages/storage/storage/locale/es.json": {
+      "upstreamPath": "packages/storage/storage/locale/es.json",
+      "sha256": "5504f5efb12f0a43448277f9c3066467bdf05e9de07b38361c232aee2cbcc642"
+    },
+    "packages/storage/storage/locale/fr.json": {
+      "upstreamPath": "packages/storage/storage/locale/fr.json",
+      "sha256": "0c05bf65fcbae4353046f97286c680779264ae33aeb05a80dd02f7cb3bd0e04e"
+    },
+    "packages/storage/storage/locale/ja.json": {
+      "upstreamPath": "packages/storage/storage/locale/ja.json",
+      "sha256": "a19bbb41ee03722d7404db6b3b14cd2ebc23e189576e411adfe3ac9a5c17a6d9"
+    },
+    "packages/storage/storage/locale/pt.json": {
+      "upstreamPath": "packages/storage/storage/locale/pt.json",
+      "sha256": "ea624aa10d3673116487161640f15139ce6edcac2cc2013abca07ed5a4ccfa40"
+    },
+    "packages/storage/storage/locale/ru.json": {
+      "upstreamPath": "packages/storage/storage/locale/ru.json",
+      "sha256": "05246b547572f946c8e3edeb26ebba0302cc904119b5a228c50478b3fe75933a"
+    },
+    "packages/storage/storage/locale/zh.json": {
+      "upstreamPath": "packages/storage/storage/locale/zh.json",
+      "sha256": "d941262393c994750446797dc82325e1a785245517b742eff4788e30863119f2"
+    },
+    "packages/storage/storage/package.json": {
+      "upstreamPath": "packages/storage/storage/package.json",
+      "sha256": "498282602370068553a154fd24d7c42b39fc0ce04430458a82bd86e5c28d6570"
+    },
+    "packages/storage/storage/src/backend.ts": {
+      "upstreamPath": "packages/storage/storage/src/backend.ts",
+      "sha256": "2474f60cf5982ca6d20893c41bc618b3cd88d244434d1556c566cb2d21addc38"
+    },
+    "packages/storage/storage/src/error.ts": {
+      "upstreamPath": "packages/storage/storage/src/error.ts",
+      "sha256": "f1c2df2f3b214cb015bfe123785786782f185f39f27450e332ef7f6886e4fb2e"
+    },
+    "packages/storage/storage/src/index.ts": {
+      "upstreamPath": "packages/storage/storage/src/index.ts",
+      "sha256": "007fd253361aba1f65b0e846a58ebf5f4ae29e5c834ccc3732b1977cc2c78c6b"
+    },
+    "packages/storage/storage/src/registry.ts": {
+      "upstreamPath": "packages/storage/storage/src/registry.ts",
+      "sha256": "c8f5005c8a8b3376743b0bac3f5ec8861df9a68da916b6064ce73246852e7fae"
+    },
+    "packages/storage/storage/tests/contract.ts": {
+      "upstreamPath": "packages/storage/storage/tests/contract.ts",
+      "sha256": "46be0090db5fe843e6f6d574ee5586b62d0702cc997eb78ac8096e7e72202c78"
+    },
+    "packages/storage/storage/tests/registry.spec.ts": {
+      "upstreamPath": "packages/storage/storage/tests/registry.spec.ts",
+      "sha256": "334c23bc0e696bb27839e47e3a1772bcd263e366f0a256efbc91a6ef6f8d9d5a"
+    },
+    "packages/storage/storage/tsconfig.json": {
+      "upstreamPath": "packages/storage/storage/tsconfig.json",
+      "sha256": "33862d7bd979a1b1f2559a5c81f248ffd72f822bbb3cd7e4a045858a2f14c1fa"
+    },
+    "packages/storage/storage-domain/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/storage/storage-domain/README.i18n.yaml": {
+      "upstreamPath": "packages/storage/storage-domain/README.i18n.yaml",
+      "sha256": "8ef3e79da51f942ed8aba3a88ddfcae05a92977411fc41254d0128f039d0ee61"
+    },
+    "packages/storage/storage-domain/README.md": {
+      "upstreamPath": "packages/storage/storage-domain/README.md",
+      "sha256": "fc1b0b83f5d3004f6f96c206dca752353f276fd76952435b9543f2d748b136d7"
+    },
+    "packages/storage/storage-domain/README.zh.md": {
+      "upstreamPath": "packages/storage/storage-domain/README.zh.md",
+      "sha256": "c0e818456b38a7773e4ed47d6ced290c2df61014f9d33205f442af4a6ea30323"
+    },
+    "packages/storage/storage-domain/locale/de.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/de.json",
+      "sha256": "21d0dfb8941cec5dc0ecbf405f08cba6e7ccb012ed5810baf06d466a5abc4c78"
+    },
+    "packages/storage/storage-domain/locale/en.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/en.json",
+      "sha256": "61baf3541d7ea997b9de6f6517b5ebcf1629055312b8f212aa16fce9c98137a2"
+    },
+    "packages/storage/storage-domain/locale/es.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/es.json",
+      "sha256": "8431e9a35399e12ac895489b4c6a81d23a2715fbea7eb0bc7daa5faa450ad3ba"
+    },
+    "packages/storage/storage-domain/locale/fr.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/fr.json",
+      "sha256": "6bb1f5b631a59754e2d98f00f6fb29955ebb51cd6481432c09cbdc83d1c5db4b"
+    },
+    "packages/storage/storage-domain/locale/ja.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/ja.json",
+      "sha256": "ff293c9057d6aa2ae2707efb7f0cf8beef4ae69ab54abb2c8e42ede582117dfd"
+    },
+    "packages/storage/storage-domain/locale/pt.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/pt.json",
+      "sha256": "e6c75c7d90d1ac3ebde801bf31751e5f1da0a46797b4712ffdfce5f80a5bec8d"
+    },
+    "packages/storage/storage-domain/locale/ru.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/ru.json",
+      "sha256": "4961b4858febd269680a968e746a972d41cb39ae60fd58dd9269055c6c9b67f1"
+    },
+    "packages/storage/storage-domain/locale/zh.json": {
+      "upstreamPath": "packages/storage/storage-domain/locale/zh.json",
+      "sha256": "011059524a5867f2db2dc04a4bd07ab900fd7a4370c7bfcf1b7e5ed155018a7b"
+    },
+    "packages/storage/storage-domain/package.json": {
+      "upstreamPath": "packages/storage/storage-domain/package.json",
+      "sha256": "9e342a0e0fe1229768ac3051db32abc32dc46f365d4e4d06ce596fc4d572e9b2"
+    },
+    "packages/storage/storage-domain/src/domain.ts": {
+      "upstreamPath": "packages/storage/storage-domain/src/domain.ts",
+      "sha256": "32e574c4029d73ab47f2e68b402ea6e0ddbe7caeaa832368b4b99c497893f70c"
+    },
+    "packages/storage/storage-domain/src/error.ts": {
+      "upstreamPath": "packages/storage/storage-domain/src/error.ts",
+      "sha256": "1f285ff8b6aeba68b96f048fc1f427212b5f6e1938770915adf40ecff3f938da"
+    },
+    "packages/storage/storage-domain/src/events.ts": {
+      "upstreamPath": "packages/storage/storage-domain/src/events.ts",
+      "sha256": "3c239eca0157166ce7ae8b417215e1e5366e5c6f36e375f3680f4bacfaf1da1c"
+    },
+    "packages/storage/storage-domain/src/index.ts": {
+      "upstreamPath": "packages/storage/storage-domain/src/index.ts",
+      "sha256": "12f9dc7a1ba7bf0d4721e60b03f08a2132e0a8576c328c0b4c179b1c7baedbd8"
+    },
+    "packages/storage/storage-domain/src/spec.ts": {
+      "upstreamPath": "packages/storage/storage-domain/src/spec.ts",
+      "sha256": "f08d0e7932b1bba40546d63f780359c12a81ebcba080d8b439a6eb960cf355cd"
+    },
+    "packages/storage/storage-domain/tests/domain.spec.ts": {
+      "upstreamPath": "packages/storage/storage-domain/tests/domain.spec.ts",
+      "sha256": "373fea7ee76616e7ef9632893cff73244a74ecfb603b22b87faf0fb6e9c5e0aa"
+    },
+    "packages/storage/storage-domain/tests/helpers/memory-backend.ts": {
+      "upstreamPath": "packages/storage/storage-domain/tests/helpers/memory-backend.ts",
+      "sha256": "c7c82e7253b5aef6c90abbae35a16cee5eb60ba932230f1cffe666d1cba4f4ef"
+    },
+    "packages/storage/storage-domain/tsconfig.json": {
+      "upstreamPath": "packages/storage/storage-domain/tsconfig.json",
+      "sha256": "16f826c3e4ca4f3c620917290900f0a32daa4f633ed824675a8a3c9b03bd158a"
+    },
+    "packages/storage/storage-json/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/storage/storage-json/README.i18n.yaml": {
+      "upstreamPath": "packages/storage/storage-json/README.i18n.yaml",
+      "sha256": "2ce4bc14145ee18a6e5b350289d0a229869518ada61818b884c0f451846bacf8"
+    },
+    "packages/storage/storage-json/README.md": {
+      "upstreamPath": "packages/storage/storage-json/README.md",
+      "sha256": "965728a1fcb420eee2d79a63e4ce323cae44b3bbec28e8d74023cc335eacff0d"
+    },
+    "packages/storage/storage-json/README.zh.md": {
+      "upstreamPath": "packages/storage/storage-json/README.zh.md",
+      "sha256": "6b75c3846c078a0a38950018f208851ad46a8912b0d901de8c4efda2bd25b321"
+    },
+    "packages/storage/storage-json/locale/de.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/de.json",
+      "sha256": "14ca4677e29cd81f5adf52c026e252a280dc352eb15f6b769dfb4ebfb41a79e4"
+    },
+    "packages/storage/storage-json/locale/en.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/en.json",
+      "sha256": "b01f04ed1a6f5f7761b8a008f8a3b31445e40ccf26662b7dbe3dc5f4c9cd817a"
+    },
+    "packages/storage/storage-json/locale/es.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/es.json",
+      "sha256": "dffdb3a61600985a6d25e5552f62d11eb94053719f89c79f0765dfee478a6e2d"
+    },
+    "packages/storage/storage-json/locale/fr.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/fr.json",
+      "sha256": "c46e53c85dc84d8fa6b29a0238d2c3d371293402f29f105fdd3675f3faefdb41"
+    },
+    "packages/storage/storage-json/locale/ja.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/ja.json",
+      "sha256": "c705469b2db62a3e02f23687082693d1509e04ba074a551ad028141cb56705e6"
+    },
+    "packages/storage/storage-json/locale/pt.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/pt.json",
+      "sha256": "9d53b1887252018d7a20bfb98b2708082f0df82cd17941e83e2aa01ce76c4f3d"
+    },
+    "packages/storage/storage-json/locale/ru.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/ru.json",
+      "sha256": "9f38d3cd0c681f8995fb7034f52ccf125a37fe2a5c6bb92e5db8939db9faa8e3"
+    },
+    "packages/storage/storage-json/locale/zh.json": {
+      "upstreamPath": "packages/storage/storage-json/locale/zh.json",
+      "sha256": "d72eda90573c73a617252cef689325aae2158722a69bf849889c7fbbd80fe7ec"
+    },
+    "packages/storage/storage-json/package.json": {
+      "upstreamPath": "packages/storage/storage-json/package.json",
+      "sha256": "b3def7fc9b6571b402c5dfb2446edcdcf3cc7e8dcd9fcacee2839176972c9b94"
+    },
+    "packages/storage/storage-json/src/atomic.ts": {
+      "upstreamPath": "packages/storage/storage-json/src/atomic.ts",
+      "sha256": "ccb2372d1b78fb7c5b00f688435519ea7a44a700e2a206c4df3fb58c1ac54d72"
+    },
+    "packages/storage/storage-json/src/format.ts": {
+      "upstreamPath": "packages/storage/storage-json/src/format.ts",
+      "sha256": "398c5edbc96ccad21bd6ba788ed3b41d1799e6b77dd6c602affd29c8ccc83f89"
+    },
+    "packages/storage/storage-json/src/index.ts": {
+      "upstreamPath": "packages/storage/storage-json/src/index.ts",
+      "sha256": "bae1a1c29859dea20d21c2730bbf3c5a30e31ed6cd7d872b8e1c726e65a33a63"
+    },
+    "packages/storage/storage-json/src/per-record-unit.ts": {
+      "upstreamPath": "packages/storage/storage-json/src/per-record-unit.ts",
+      "sha256": "5b8aab660e8d0d749b58f4273753360a2219ae029e1d69ed047e8caa155a3fa0"
+    },
+    "packages/storage/storage-json/src/single-unit.ts": {
+      "upstreamPath": "packages/storage/storage-json/src/single-unit.ts",
+      "sha256": "ff01b15fde8601ed60c5cfd6c66dc3504befc88dd8ce3f177806df89ccb96927"
+    },
+    "packages/storage/storage-json/tests/json-backend.spec.ts": {
+      "upstreamPath": "packages/storage/storage-json/tests/json-backend.spec.ts",
+      "sha256": "2114531c4220f36ce6c64929df1de649d6b698568dbecbe4ead5323914264c32"
+    },
+    "packages/storage/storage-json/tests/per-record-batch.spec.ts": {
+      "upstreamPath": "packages/storage/storage-json/tests/per-record-batch.spec.ts",
+      "sha256": "02daa87b9398b385c2b0d9fd057284954c5db64d1bbe4bc82f402d0f1b5f7a36"
+    },
+    "packages/storage/storage-json/tsconfig.json": {
+      "upstreamPath": "packages/storage/storage-json/tsconfig.json",
+      "sha256": "16f826c3e4ca4f3c620917290900f0a32daa4f633ed824675a8a3c9b03bd158a"
+    },
+    "packages/storage/storage-sqlite/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/storage/storage-sqlite/README.i18n.yaml": {
+      "upstreamPath": "packages/storage/storage-sqlite/README.i18n.yaml",
+      "sha256": "5221d7d1bdeb900cde62d98c225a029d19941fc372576fb707080dbcea938725"
+    },
+    "packages/storage/storage-sqlite/README.md": {
+      "upstreamPath": "packages/storage/storage-sqlite/README.md",
+      "sha256": "38cf6995047ee9d3d6f8562b0d5dcbbd6dbf7c67c5ba0404d284be3ff0559ce6"
+    },
+    "packages/storage/storage-sqlite/README.zh.md": {
+      "upstreamPath": "packages/storage/storage-sqlite/README.zh.md",
+      "sha256": "9e5e21dbeab9b57912ce5b80863517c5e051c6d08f586cfc8d06ee231809b634"
+    },
+    "packages/storage/storage-sqlite/locale/de.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/de.json",
+      "sha256": "045ad948011c87f6b75940da64d1494d148447356674d0c0600ee6b0c3473868"
+    },
+    "packages/storage/storage-sqlite/locale/en.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/en.json",
+      "sha256": "7e1cb58ffda907956cdb3a83f8161f06ec94bf0f37c16306f19753c0aa231f79"
+    },
+    "packages/storage/storage-sqlite/locale/es.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/es.json",
+      "sha256": "0a126df00ebe2ddc81564f91c7a0b8de78ee7770f159b740a95f716e3c6f8fb9"
+    },
+    "packages/storage/storage-sqlite/locale/fr.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/fr.json",
+      "sha256": "6cc44bd9f41c9af8c088d6fdfd9b66d81bb78a4161034cb67cdb279978b9f301"
+    },
+    "packages/storage/storage-sqlite/locale/ja.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/ja.json",
+      "sha256": "d7afb479d447739792549d534a0090a5360bfeed33fb08a5d180ee2430e91f29"
+    },
+    "packages/storage/storage-sqlite/locale/pt.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/pt.json",
+      "sha256": "bf0cbcfbd50998a9aed8e4b5faffb4bec67967039d8c4d50eca4a7d0c87225be"
+    },
+    "packages/storage/storage-sqlite/locale/ru.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/ru.json",
+      "sha256": "d5518cbb93d8e3fea6d88d6a5f7a776d25aae20644d222427e5020e948029a42"
+    },
+    "packages/storage/storage-sqlite/locale/zh.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/locale/zh.json",
+      "sha256": "403368a1c1b64f08ca203da2ee5dd9dc5daea10ad3f1ee97c14ace2d28c5ff4a"
+    },
+    "packages/storage/storage-sqlite/package.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/package.json",
+      "sha256": "a7109b7273271fc779876afb94f4939390f107663cc320cfc9b0a3f7952456db"
+    },
+    "packages/storage/storage-sqlite/src/index.ts": {
+      "upstreamPath": "packages/storage/storage-sqlite/src/index.ts",
+      "sha256": "14df50e3a48f8f15a61dcc44fdfc06c518e261bb3d14938ecf0369aa29a184fc"
+    },
+    "packages/storage/storage-sqlite/src/schema.ts": {
+      "upstreamPath": "packages/storage/storage-sqlite/src/schema.ts",
+      "sha256": "7536636af47b23ffffd85cbdbf6ead1a32031bd582accc4bf573ec2c7df397fa"
+    },
+    "packages/storage/storage-sqlite/src/unit.ts": {
+      "upstreamPath": "packages/storage/storage-sqlite/src/unit.ts",
+      "sha256": "eae6ebc7867e7fe107439c418f8f6d3368a60ead7c56793adc7ee8b7d87e0e17"
+    },
+    "packages/storage/storage-sqlite/tests/sqlite-backend.spec.ts": {
+      "upstreamPath": "packages/storage/storage-sqlite/tests/sqlite-backend.spec.ts",
+      "sha256": "ccb6b884e387887d0bf0cfd6b03ddc6a117617d4626e29edff4e1b68fc78d5f7"
+    },
+    "packages/storage/storage-sqlite/tsconfig.json": {
+      "upstreamPath": "packages/storage/storage-sqlite/tsconfig.json",
+      "sha256": "16f826c3e4ca4f3c620917290900f0a32daa4f633ed824675a8a3c9b03bd158a"
+    },
+    "packages/subprocess/subprocess/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/subprocess/subprocess/README.i18n.yaml": {
+      "upstreamPath": "packages/subprocess/subprocess/README.i18n.yaml",
+      "sha256": "bb932b67899e1f59d10e9138b606885faae7f4a9cb8c3d8d09172be6f3a662d4"
+    },
+    "packages/subprocess/subprocess/README.md": {
+      "upstreamPath": "packages/subprocess/subprocess/README.md",
+      "sha256": "c25fd60d16fc4101855afe6d9b1c7ba39d07e21171987f02e82f5995c2dcf344"
+    },
+    "packages/subprocess/subprocess/README.zh.md": {
+      "upstreamPath": "packages/subprocess/subprocess/README.zh.md",
+      "sha256": "8841479aef5119a9776772eea7151b35dcbcc622aa7e39dcac332e3994691b8c"
+    },
+    "packages/subprocess/subprocess/package.json": {
+      "upstreamPath": "packages/subprocess/subprocess/package.json",
+      "sha256": "57fde907b62a66b307a977181056048d7c46a3e037d1808040112c5d07d37eb3"
+    },
+    "packages/subprocess/subprocess/src/control.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/src/control.ts",
+      "sha256": "50db21bb7ca66c69757333ac0b4e1ccf067afe40d9b451d74c71d51ea2445665"
+    },
+    "packages/subprocess/subprocess/src/index.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/src/index.ts",
+      "sha256": "19e3fde571d0cd1f76e95696477a7d38677529aaf51b07c429965f2e4330065f"
+    },
+    "packages/subprocess/subprocess/src/types.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/src/types.ts",
+      "sha256": "e65166444ff791994a7198a86ac4a821e8329120bd551f342913623c87e5a715"
+    },
+    "packages/subprocess/subprocess/tests/control.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/tests/control.spec.ts",
+      "sha256": "b1586ce41a7af5e157cb5e090001ede2c710b92641f5bd065cfe543c326900c5"
+    },
+    "packages/subprocess/subprocess/tests/egress.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/tests/egress.spec.ts",
+      "sha256": "03d908fdee3a3656a69862dac7a07f047fee648dceddc6c2df1cb119d2fd859d"
+    },
+    "packages/subprocess/subprocess/tests/service.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/tests/service.spec.ts",
+      "sha256": "c6dceb44d3e9b7420e0f7a8411915fdd51c8aed1dc87936ecebe113be2c66663"
+    },
+    "packages/subprocess/subprocess/tsconfig.json": {
+      "upstreamPath": "packages/subprocess/subprocess/tsconfig.json",
+      "sha256": "c14a5b2cc4f044a3c27bed0d5c46fa1a9aa18763bc73c98e7a420831a059c554"
+    },
+    "packages/subprocess/subprocess/tsdown.config.ts": {
+      "upstreamPath": "packages/subprocess/subprocess/tsdown.config.ts",
+      "sha256": "2e98a943c9832ebc99875f5d38518d84fa48edc13671276a911ad22f213018a7"
+    },
+    "packages/subprocess/subprocess-local/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/subprocess/subprocess-local/README.i18n.yaml": {
+      "upstreamPath": "packages/subprocess/subprocess-local/README.i18n.yaml",
+      "sha256": "27d8d8512756258c7cd6021475813e063770441f33068eb47b35551577dbf3b8"
+    },
+    "packages/subprocess/subprocess-local/README.md": {
+      "upstreamPath": "packages/subprocess/subprocess-local/README.md",
+      "sha256": "b94d3cf048a15a67d1bee7f0b2d801c6f96316e12341a403dbe36cb61efeac34"
+    },
+    "packages/subprocess/subprocess-local/README.zh.md": {
+      "upstreamPath": "packages/subprocess/subprocess-local/README.zh.md",
+      "sha256": "1c45b980b8e4a87eef73c71084e744aa16b38a4dfeafe079909fe5634b3d0038"
+    },
+    "packages/subprocess/subprocess-local/locale/de.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/de.json",
+      "sha256": "c3cff46f5f5cc745b2730164e39b1dbd8c01ce62e37315a368d3ccec22716436"
+    },
+    "packages/subprocess/subprocess-local/locale/en.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/en.json",
+      "sha256": "06bacd3af14eb50d1a4bdd63dd18e57188a6da43bbb4dcfbb43bcf3d566d3163"
+    },
+    "packages/subprocess/subprocess-local/locale/es.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/es.json",
+      "sha256": "55536426cac719a34c9fc077ec0969dcab075d8c6a57ce2c4b39f823f42b14dc"
+    },
+    "packages/subprocess/subprocess-local/locale/fr.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/fr.json",
+      "sha256": "44f3e45774ea88bd92c5a95262b9ad350b0b809aff8cb304669b71c0883d10f3"
+    },
+    "packages/subprocess/subprocess-local/locale/ja.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/ja.json",
+      "sha256": "7ef20b81a2be3761e86c263eba4c265a717270a9d9ba4389bd4848a96be1e11c"
+    },
+    "packages/subprocess/subprocess-local/locale/pt.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/pt.json",
+      "sha256": "509e91115a11ebe20516415498a60207b0c52f431f016cb132370fe9e8bc81fa"
+    },
+    "packages/subprocess/subprocess-local/locale/ru.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/ru.json",
+      "sha256": "c67252e0f6c902897ed0bf400dc6be87be61eca44ad089bdd7b7e8b8caa1f9b6"
+    },
+    "packages/subprocess/subprocess-local/locale/zh.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/locale/zh.json",
+      "sha256": "e8c1329cd69b2a75aded5dad32f4c4008e3f96922e9e4c952afa4cfb5eec793b"
+    },
+    "packages/subprocess/subprocess-local/package.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/package.json",
+      "sha256": "5ddcec37db7e5dbf8c2b4c273a8c2291e010fc3e8307149bdf87db1a4665f724"
+    },
+    "packages/subprocess/subprocess-local/scripts/ensure-spawn-helper.mjs": {
+      "upstreamPath": "packages/subprocess/subprocess-local/scripts/ensure-spawn-helper.mjs",
+      "sha256": "ca5509febf1e6ec1356df121835ebe5ed2f9cace4bdc2ba6d83d41c7e45e0f1b"
+    },
+    "packages/subprocess/subprocess-local/src/bin.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/bin.ts",
+      "sha256": "2f4ed2f5b9a08d8b828a73c81f82ed3a9416787e73c3d50acf6c50f71884010f"
+    },
+    "packages/subprocess/subprocess-local/src/control-spawn.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/control-spawn.ts",
+      "sha256": "cefa514393081def31a259ad69757336ca9ceeaf947409e9cd95633e067656c1"
+    },
+    "packages/subprocess/subprocess-local/src/index.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/index.ts",
+      "sha256": "0839baefcbc7562ac73562cc7c5c3f1f983a8693bf3b76e0c956a5f93b4548ce"
+    },
+    "packages/subprocess/subprocess-local/src/linux-execve.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/linux-execve.ts",
+      "sha256": "0b6857c340fc4f43e4a86544ea41af536e1552be5a69c5a53c91187ad205a2dc"
+    },
+    "packages/subprocess/subprocess-local/src/linux-scope-selector.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/linux-scope-selector.ts",
+      "sha256": "198c568df54f13f681e7029c056c9abd53bcde4701d9ac0266b629efb8e91c4d"
+    },
+    "packages/subprocess/subprocess-local/src/linux-scope.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/linux-scope.ts",
+      "sha256": "45bf7868740f9dc3ab2a549c99ad2ed73cd222587563b0b9bae30e9a05d871c8"
+    },
+    "packages/subprocess/subprocess-local/src/managed-owner.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/managed-owner.ts",
+      "sha256": "c8153bbb1093f2ed69b45170f59ebadc9ac770210fff23e4a99c6228522a286d"
+    },
+    "packages/subprocess/subprocess-local/src/output.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/output.ts",
+      "sha256": "1151a91d7bc31ffcd6ea3db85af2ef8c19ac4bc2d3a41654da9feac29cae7433"
+    },
+    "packages/subprocess/subprocess-local/src/process-inspector.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/process-inspector.ts",
+      "sha256": "1e4ca66f18c2118c1336d198f265f994e3eaf9d450fd2c974ea207d31a58238d"
+    },
+    "packages/subprocess/subprocess-local/src/runner-launch.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/runner-launch.ts",
+      "sha256": "5cac2782d724a12056f049e0275a1897c659b306db628aed86dbd72d502a5d7a"
+    },
+    "packages/subprocess/subprocess-local/src/runner-protocol.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/runner-protocol.ts",
+      "sha256": "0ada1f271cede3a0a0f04fa1c7df4fb76a3466dc239315b7332cd4e3630a306c"
+    },
+    "packages/subprocess/subprocess-local/src/shell-activity.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/shell-activity.ts",
+      "sha256": "86c0fadc2f61d245ec0b17ef65c333f59d3614433701788504f27e7583181dcf"
+    },
+    "packages/subprocess/subprocess-local/src/spawn-runner.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/spawn-runner.ts",
+      "sha256": "d4ba8aeec4427437cf4b7f23d2ea61c3a25becb43ee3944df190eef537a4679d"
+    },
+    "packages/subprocess/subprocess-local/src/spawn.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/spawn.ts",
+      "sha256": "1087f9ed1704167865e1a35cea0604f335cc348ac17da9c83c542fc454d00ae0"
+    },
+    "packages/subprocess/subprocess-local/src/terminal.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/terminal.ts",
+      "sha256": "ab720272e6a3583c665f916b96d98654766acc872141026a120f95205863107c"
+    },
+    "packages/subprocess/subprocess-local/src/windows-inspector.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/windows-inspector.ts",
+      "sha256": "b11489dba93ec3747daa2e6812f99ce7e57829e68b3b5597af52d45039b6038b"
+    },
+    "packages/subprocess/subprocess-local/src/windows-job.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/src/windows-job.ts",
+      "sha256": "220d210e72df9da21a313a70a400e6f5443b17b4a08188f0131bc09167067f63"
+    },
+    "packages/subprocess/subprocess-local/tests/control.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/control.spec.ts",
+      "sha256": "b763e7a6083cc696f2000c918ac09a1819d83f50800c0a0ca21a2a83f418480e"
+    },
+    "packages/subprocess/subprocess-local/tests/fixtures/control-child.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/fixtures/control-child.ts",
+      "sha256": "94c3f515efc40d9ee76908414b9a6dc53e619b44be5cbb763ac2b363f309452c"
+    },
+    "packages/subprocess/subprocess-local/tests/fixtures/hold-linux-bootstrap.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/fixtures/hold-linux-bootstrap.ts",
+      "sha256": "b3edc86ac1678649693589b86b3a335931b6565fa1a67d2f933a3b4a7425d4bc"
+    },
+    "packages/subprocess/subprocess-local/tests/fixtures/managed-tree.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/fixtures/managed-tree.ts",
+      "sha256": "5b7dd2d032b86f80493779466c9c41460ce53326183092188c8e53ae4fb35cc3"
+    },
+    "packages/subprocess/subprocess-local/tests/fixtures/process-exit-host.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/fixtures/process-exit-host.ts",
+      "sha256": "48c25cb2632698ac80a7d2de7faa1e09fc3ede9660183da883817c58ca27a590"
+    },
+    "packages/subprocess/subprocess-local/tests/linux-execve.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/linux-execve.spec.ts",
+      "sha256": "b12c0f991057125e11d77dac32e4b3561822b09cd55966cb78146008a3d4f4a9"
+    },
+    "packages/subprocess/subprocess-local/tests/linux-scope-selector.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/linux-scope-selector.spec.ts",
+      "sha256": "875ce29d093bea35065cf52a51d50cd340edfe86c986a96aeb82f0c9581261d2"
+    },
+    "packages/subprocess/subprocess-local/tests/linux-scope.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/linux-scope.spec.ts",
+      "sha256": "f5c0b39a4ecc041e0b8cca204d26b381cd489aac8100abadaeb66ab279312d6d"
+    },
+    "packages/subprocess/subprocess-local/tests/local.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/local.spec.ts",
+      "sha256": "39e51b29538bbf6fce8a6a2215be8c52de2154ba2421a301057ec2af2b22e36e"
+    },
+    "packages/subprocess/subprocess-local/tests/native-containment.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/native-containment.spec.ts",
+      "sha256": "5cd5db92374c7211bbbc60f56773631b7dc4cdda588e0ffe7708936ab8a46869"
+    },
+    "packages/subprocess/subprocess-local/tests/native-windows.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/native-windows.spec.ts",
+      "sha256": "70ac6e571c974b699b2355e2a94f8a7ea4542afbfe49bc609739d14c025a65cd"
+    },
+    "packages/subprocess/subprocess-local/tests/process-exit.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/process-exit.spec.ts",
+      "sha256": "c8bff2f46e90e010361245e874185235fde508866f424d253722b9db056f9556"
+    },
+    "packages/subprocess/subprocess-local/tests/process-inspector.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/process-inspector.spec.ts",
+      "sha256": "1aca49b6389e306dfa6714143566ec33f50739ec7aae5fda9102d16b9b0c15e6"
+    },
+    "packages/subprocess/subprocess-local/tests/shell-activity-files.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/shell-activity-files.spec.ts",
+      "sha256": "3eae91ebfca7a6b12142b8af87f37c8177fe4f25dfbe32dcd250fe706d4ed569"
+    },
+    "packages/subprocess/subprocess-local/tests/shell-activity.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/shell-activity.spec.ts",
+      "sha256": "793692cdd7736eebca83259408fee0a454578bae2aacaedec999611bd3c8335a"
+    },
+    "packages/subprocess/subprocess-local/tests/spawn-runner-built.e2e.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/spawn-runner-built.e2e.ts",
+      "sha256": "d60c1a7b5f00960478af23d4ed8162fe2d466e54a9def6b628f3c17abc15f5b2"
+    },
+    "packages/subprocess/subprocess-local/tests/spawn-runner.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/spawn-runner.spec.ts",
+      "sha256": "e76c43d97e81ec82bc7bbaac6ad5599e3fd0f98b9191940442831e6cc49ca186"
+    },
+    "packages/subprocess/subprocess-local/tests/spawn.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/spawn.spec.ts",
+      "sha256": "d37e82967264c1ff98ca2dc86c5bb2142ce22a92c8998ec3bb68a90bdfbf6329"
+    },
+    "packages/subprocess/subprocess-local/tests/terminal.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/terminal.spec.ts",
+      "sha256": "5f5c8ce01e2ee0b98787b3df75c39f1a8ad5bee478b69ca761276006bb68dd80"
+    },
+    "packages/subprocess/subprocess-local/tests/windows-inspector.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/windows-inspector.spec.ts",
+      "sha256": "3cca4d0fbeefae35c32ef396eb29ef83da6ee118ca6734ce227a357806a98d73"
+    },
+    "packages/subprocess/subprocess-local/tests/windows-job.spec.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tests/windows-job.spec.ts",
+      "sha256": "b30def495d70f0e40e4315c44ce7942018ec574ca6c46797d8e4215a14cbb577"
+    },
+    "packages/subprocess/subprocess-local/tsconfig.json": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tsconfig.json",
+      "sha256": "dcb606df8c0fc66f0c9030c6709a9be9d8b8858dd4c3a11f59e0c758d701fec7"
+    },
+    "packages/subprocess/subprocess-local/tsdown.config.ts": {
+      "upstreamPath": "packages/subprocess/subprocess-local/tsdown.config.ts",
+      "sha256": "1bab30e12b951cf0f0a60a71c161e62cd444ae3ddc7c25e41b14d954670a7ef0"
+    },
+    "packages/subprocess/win32-process/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/subprocess/win32-process/README.i18n.yaml": {
+      "upstreamPath": "packages/subprocess/win32-process/README.i18n.yaml",
+      "sha256": "495793106a799f896540069cef7ca2b309f2d768c394ffc056fe7b3de80b516e"
+    },
+    "packages/subprocess/win32-process/README.md": {
+      "upstreamPath": "packages/subprocess/win32-process/README.md",
+      "sha256": "52a5a71f80fc3468c38b4114df112d0f4e9044db5094dcb6f0262e41dbf220dd"
+    },
+    "packages/subprocess/win32-process/README.zh.md": {
+      "upstreamPath": "packages/subprocess/win32-process/README.zh.md",
+      "sha256": "7236ec5165c345c1e55abeea5a795dd93d067c14bdd6e97a4450a4b9ade99c63"
+    },
+    "packages/subprocess/win32-process/package.json": {
+      "upstreamPath": "packages/subprocess/win32-process/package.json",
+      "sha256": "bd36acb0b81c0b66caad06f9dd64e33ca7d151f915e8b346842933e17d4a7e8f"
+    },
+    "packages/subprocess/win32-process/src/abi.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/abi.ts",
+      "sha256": "02983fd084440c864300ab5c5c4c10bbbcf2e2b1575c01dc2589917b68721126"
+    },
+    "packages/subprocess/win32-process/src/control-stdio.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/control-stdio.ts",
+      "sha256": "8870419b7d48e58acef5e18f98cdfcdb4cc462ec549b3ed853d60a04c3a93c37"
+    },
+    "packages/subprocess/win32-process/src/errors.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/errors.ts",
+      "sha256": "e0e7377a376ab5c16289d0c9d455ee0460efdcca5f45dd6bad99dfa39e313295"
+    },
+    "packages/subprocess/win32-process/src/ffi.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/ffi.ts",
+      "sha256": "988331864f460138336a29f9290b46e4cd6b46ba5042b39b74621bfb3f72f940"
+    },
+    "packages/subprocess/win32-process/src/index.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/index.ts",
+      "sha256": "ef120e78e18da1f01fe27066d41eda6eca9ec214f2473e866c7e245b94b2d0bd"
+    },
+    "packages/subprocess/win32-process/src/koffi.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/koffi.ts",
+      "sha256": "13aa290917b636816e17a2656e01a776014b7ea4990bdf799de74d962ce4fec6"
+    },
+    "packages/subprocess/win32-process/src/process.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/src/process.ts",
+      "sha256": "2043f59d97f320f83d731fb2f81ec15c77065d4ff98f305be3a95cebb5e776be"
+    },
+    "packages/subprocess/win32-process/tests/ffi.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/ffi.spec.ts",
+      "sha256": "cd48de73841b383105da7e13e0cbb594ae2aebb100b417b0ba3c693d362f76b2"
+    },
+    "packages/subprocess/win32-process/tests/fixtures/console-state.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/fixtures/console-state.ts",
+      "sha256": "37b055ec12af295f3d652fed3e6589b4e3218a4783b0ee7df40f09be4f1bb0fa"
+    },
+    "packages/subprocess/win32-process/tests/ordinary-process.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/ordinary-process.spec.ts",
+      "sha256": "fa20c50cb94709536d8dd476052ecf165c0f5c33ac8e2da7b37317f3b84bd996"
+    },
+    "packages/subprocess/win32-process/tests/process-allocation-failure.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/process-allocation-failure.spec.ts",
+      "sha256": "db5eb3ebb7656b2a31f488645ba4593bf04d0ae0001d4c86bbcf91570dcff214"
+    },
+    "packages/subprocess/win32-process/tests/process-failure-paths.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/process-failure-paths.spec.ts",
+      "sha256": "35bdcadce418e38406f56bad748fb47edb637da8521159e972845662efd9bb2b"
+    },
+    "packages/subprocess/win32-process/tests/process.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/process.spec.ts",
+      "sha256": "eb8bd15dd2e9f5448644b9c6ec20317198047a14fc066cdf39c1f2c8108828f1"
+    },
+    "packages/subprocess/win32-process/tests/quote.spec.ts": {
+      "upstreamPath": "packages/subprocess/win32-process/tests/quote.spec.ts",
+      "sha256": "eeec7c8693a22eeeb631bb5cf4faf7131a52fe7241cccd74faae1feb32aa60d8"
+    },
+    "packages/subprocess/win32-process/tsconfig.json": {
+      "upstreamPath": "packages/subprocess/win32-process/tsconfig.json",
+      "sha256": "f314c7423a4e6ac76fdb5537bb4c50c71905680c3717fe4208e90b6d657cff7c"
+    },
+    "packages/subprocess/win32-process/verify/abi-probe.cpp": {
+      "upstreamPath": "packages/subprocess/win32-process/verify/abi-probe.cpp",
+      "sha256": "ad0619730d3fda6dc7b22ad9e72939c6cd02a9e8b73c79c40684d1f492353616"
+    },
+    "packages/util/http-proxy/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/util/http-proxy/README.i18n.yaml": {
+      "upstreamPath": "packages/util/http-proxy/README.i18n.yaml",
+      "sha256": "f11b48666b75cd7a56536994a5a0220bd86d9bac4acd1a3903404d3f9248491b"
+    },
+    "packages/util/http-proxy/README.md": {
+      "upstreamPath": "packages/util/http-proxy/README.md",
+      "sha256": "cf8ba0c3e7ba30ddd58be4f90c44d80e2d218e0ce414bbcb61d09cdbf1b824ee"
+    },
+    "packages/util/http-proxy/README.zh.md": {
+      "upstreamPath": "packages/util/http-proxy/README.zh.md",
+      "sha256": "ffb126e0f6c961b192d7057bdb3401bd3f5238f7452ea171e10dac01f2076f64"
+    },
+    "packages/util/http-proxy/package.json": {
+      "upstreamPath": "packages/util/http-proxy/package.json",
+      "sha256": "d52f59270aab1e1eb6cad0ef46f866635275726a472905c4d20c83debb7515cb"
+    },
+    "packages/util/http-proxy/src/index.ts": {
+      "upstreamPath": "packages/util/http-proxy/src/index.ts",
+      "sha256": "065a1154dd85977e4549ff692554b1d5c002a835ba30ce15a02d210e8f9678b6"
+    },
+    "packages/util/http-proxy/src/install.ts": {
+      "upstreamPath": "packages/util/http-proxy/src/install.ts",
+      "sha256": "acf606d8cdbee7364c3c55dbae025e3fa1c2a4d81b708d071e57562546894427"
+    },
+    "packages/util/http-proxy/src/policy.ts": {
+      "upstreamPath": "packages/util/http-proxy/src/policy.ts",
+      "sha256": "4827eabf9fac440298fa38e1bdc4189bafa9a7d98852a25848d62b03ecc6aacf"
+    },
+    "packages/util/http-proxy/tests/install.spec.ts": {
+      "upstreamPath": "packages/util/http-proxy/tests/install.spec.ts",
+      "sha256": "959b5af4e669eb2f4d2470d15e484ad9b5d481173957a8cb351c1c81ca8af6bd"
+    },
+    "packages/util/http-proxy/tests/matcher-parity.spec.ts": {
+      "upstreamPath": "packages/util/http-proxy/tests/matcher-parity.spec.ts",
+      "sha256": "237ae5146fc0835fecd45f7d54cbc47e5ab0c504c1bc95e2287779975b53a36a"
+    },
+    "packages/util/http-proxy/tests/policy.spec.ts": {
+      "upstreamPath": "packages/util/http-proxy/tests/policy.spec.ts",
+      "sha256": "56dc573e0e83e840fdcd34622b11464a011caa07659f3e8ace3f78a86510484e"
+    },
+    "packages/util/http-proxy/tsconfig.json": {
+      "upstreamPath": "packages/util/http-proxy/tsconfig.json",
+      "sha256": "cd37553e80b9913dec33adf4aa0fff20071647b3952bf74118e4bf8193b5cc58"
+    },
+    "packages/util/launch-environment/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/util/launch-environment/README.i18n.yaml": {
+      "upstreamPath": "packages/util/launch-environment/README.i18n.yaml",
+      "sha256": "739d1301e4bc036fb0cc4bf6454cd952b5cd9ec472a27ee731e3a31db9ed3c2e"
+    },
+    "packages/util/launch-environment/README.md": {
+      "upstreamPath": "packages/util/launch-environment/README.md",
+      "sha256": "b47339ed53367c4c86528ca0dc906726711dd5b78623a21a398e5e7e57d6f016"
+    },
+    "packages/util/launch-environment/README.zh.md": {
+      "upstreamPath": "packages/util/launch-environment/README.zh.md",
+      "sha256": "36d6d4ae5f24cbc6a2a08d83ef1efbd3ebca1190944eb26d4aefdecb59037cfb"
+    },
+    "packages/util/launch-environment/package.json": {
+      "upstreamPath": "packages/util/launch-environment/package.json",
+      "sha256": "c8849d0212955ea9abb2c8c1127a2bef335303d2c6404ce21cadaf9f3505f183"
+    },
+    "packages/util/launch-environment/src/index.ts": {
+      "upstreamPath": "packages/util/launch-environment/src/index.ts",
+      "sha256": "4b9cb39fd421108a1b4d3a38fe98814efad96b36770c2508ef223a090b5c1695"
+    },
+    "packages/util/launch-environment/tests/launch-environment.spec.ts": {
+      "upstreamPath": "packages/util/launch-environment/tests/launch-environment.spec.ts",
+      "sha256": "d559d348e80f522bd1b39fab531ef57ae852cb4dec733160d97d793a260050fa"
+    },
+    "packages/util/launch-environment/tsconfig.json": {
+      "upstreamPath": "packages/util/launch-environment/tsconfig.json",
+      "sha256": "830f8af1689fb79931766eb12d2e46dceaf9fdeda5bcaef536814fe62f906f22"
+    },
+    "packages/util/lazy-require/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/util/lazy-require/README.i18n.yaml": {
+      "upstreamPath": "packages/util/lazy-require/README.i18n.yaml",
+      "sha256": "11345190fd51679a4bf9ae1e474b6e43152583732bcf249d5c8df537fd07a8e4"
+    },
+    "packages/util/lazy-require/README.md": {
+      "upstreamPath": "packages/util/lazy-require/README.md",
+      "sha256": "aacff96e3fa4502ad46fdceb12ca042833eb0356f918e099bf8be92b784f6ffd"
+    },
+    "packages/util/lazy-require/README.zh.md": {
+      "upstreamPath": "packages/util/lazy-require/README.zh.md",
+      "sha256": "4a29f487e1a4531c98a6afd9711f92cebd9b870480cbba10588f230074dd0871"
+    },
+    "packages/util/lazy-require/package.json": {
+      "upstreamPath": "packages/util/lazy-require/package.json",
+      "sha256": "d77cf10da59932d58684169b79a6e325eba171b0c1a01c565d37447a753c4d4f"
+    },
+    "packages/util/lazy-require/src/index.ts": {
+      "upstreamPath": "packages/util/lazy-require/src/index.ts",
+      "sha256": "3453ea694b03c110b366c4d6c18ff6f2d32004ded38cd43ceb89c3ed7aa11fdf"
+    },
+    "packages/util/lazy-require/tests/fixtures/value.cjs": {
+      "upstreamPath": "packages/util/lazy-require/tests/fixtures/value.cjs",
+      "sha256": "048cec75c52ae9147503a21ee8bd0e41be847956c365a7511b6cfdd653e2564b"
+    },
+    "packages/util/lazy-require/tests/index.spec.ts": {
+      "upstreamPath": "packages/util/lazy-require/tests/index.spec.ts",
+      "sha256": "fee8e5aeb9badf587ae5d2f586d6f0d860669e4eee4f09eda0b90727bea8ad86"
+    },
+    "packages/util/lazy-require/tsconfig.json": {
+      "upstreamPath": "packages/util/lazy-require/tsconfig.json",
+      "sha256": "7e86a9ae63aca473186b138ad589d9da22e4df8cfe64f2b74995d2726014d721"
+    },
+    "packages/util/timeout/LICENSE": {
+      "upstreamPath": "LICENSE",
+      "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be"
+    },
+    "packages/util/timeout/README.i18n.yaml": {
+      "upstreamPath": "packages/util/timeout/README.i18n.yaml",
+      "sha256": "6b67026a1cbcf6167173f0b63d442fed1bb30e1abc54e4136970fcfd2d303060"
+    },
+    "packages/util/timeout/README.md": {
+      "upstreamPath": "packages/util/timeout/README.md",
+      "sha256": "7537ec20df1ec33abc2b4d5f8aaacc63d0a4c40d990cbe205dcd32444efd58a1"
+    },
+    "packages/util/timeout/README.zh.md": {
+      "upstreamPath": "packages/util/timeout/README.zh.md",
+      "sha256": "963107104df2dde488da40c4c7c808f74802dfb0d3027691e457ee1d9614a05e"
+    },
+    "packages/util/timeout/package.json": {
+      "upstreamPath": "packages/util/timeout/package.json",
+      "sha256": "cbcd93e77f1e88c259ddc4f229e15fb94d6f636655edb877580e40ef14e03e6d"
+    },
+    "packages/util/timeout/src/index.ts": {
+      "upstreamPath": "packages/util/timeout/src/index.ts",
+      "sha256": "cadc1aea5b85854f59ca68cee8b7d08c4ebdd378d1c8e081e0031423c262e6b1"
+    },
+    "packages/util/timeout/tests/timeout.spec.ts": {
+      "upstreamPath": "packages/util/timeout/tests/timeout.spec.ts",
+      "sha256": "3d9adcb027806ed9572bb05facc3d5d97ce505f8336e6107b65c80c77db7822d"
+    },
+    "packages/util/timeout/tsconfig.json": {
+      "upstreamPath": "packages/util/timeout/tsconfig.json",
+      "sha256": "cd37553e80b9913dec33adf4aa0fff20071647b3952bf74118e4bf8193b5cc58"
+    }
+  },
+  "sourceModifications": [
+    {
+      "path": "packages/client/store/package.json",
+      "sha256": "8174536c78268b6c9b32f09a23079d3dad438286084a03aad53bf361876a2d20",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/client/ui-slots/package.json",
+      "sha256": "cd71261301710a41388ec96ed8f6fe384038e8a65987b7ff517dd72c4dd5628e",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/client/ui-slots/src/renderer.ts",
+      "sha256": "a0a13af4d7a2a44c34a5f05d5016e8f7c015ebc2336ae238efced4013b9adeb1",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/core/scope/package.json",
+      "sha256": "6f2bfbd6407fae1c68db7f57796cedea6754b49b2da8c9b97efcdadb93acad99",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/core/scope/src/index.ts",
+      "sha256": "9ba3ffbd634c5cbd8c54602eb13a69c7e66a5c74ca13038197b51e3e0bd816c5",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/core/scope/src/store.ts",
+      "sha256": "5db641a8b42346e5a7ab28ddee97c1cab17f83a8f2c5c60486a8d8199c85f9f7",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/core/scope/tests/scope.spec.ts",
+      "sha256": "fddb0a483ed86ddfbd95f107d86600b2a037a2d7a1a8bcbf5bf06214cfa4b9a5",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/core/scope/tests/store.spec.ts",
+      "sha256": "5b2dfbf6cd2726aa40a1a0100baf5618c6c90cc6ab8eae3a33780080a3799f5d",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage/package.json",
+      "sha256": "3c217358ebd3e49ffcaa8830a2b30d948d74544860c0a8168ede484669a815d9",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/storage/storage/src/index.ts",
+      "sha256": "53059bf1d93aea1e2bfe2ab66556ba612a2024b840c8549852aaf1f9813cd915",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage/tests/registry.spec.ts",
+      "sha256": "7b91840684490867f28799e0aa95c6a60fd6178385a6c07b8b768d848e18e9d7",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-domain/package.json",
+      "sha256": "878316ecc8679919f7993713b9c1df849d60178f8c88970476337bb1a412bec7",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/storage/storage-domain/src/domain.ts",
+      "sha256": "4737c00838439e1bb6aeccd6a1c220b6c52ac8db485b92139f923cf7347f8ceb",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-domain/src/events.ts",
+      "sha256": "2e01df8920fceab65e48485ce41b638042686c508f9651170a66805a9837172b",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-domain/src/index.ts",
+      "sha256": "1d4efe7de1c5d93b43cc6489148a22ae3ca387cd1fcf559cde7d6728290fffd1",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-domain/tests/domain.spec.ts",
+      "sha256": "e9a4200341add02620ed3a4d0f342abc9834859b52bd5c8fe112e3990a916152",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-json/package.json",
+      "sha256": "51ecdcc2284c6ffede4776ed68f19548e90493682e42de2f736c4a1fecc039aa",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/storage/storage-json/src/index.ts",
+      "sha256": "e3d30914f50f5a76f42999ba32c5f35ec4508f8055dc253fa29c7d22c91ae8b7",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-json/tests/json-backend.spec.ts",
+      "sha256": "dd15413be5eaabacfe3966b186b80ce3296f6f3372a9266a38f7d898e7f3970c",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-sqlite/package.json",
+      "sha256": "0b7ef689286dc8cc187801ee36e03b0c2fdfc9799ac197f23880188e4aba6567",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/storage/storage-sqlite/src/index.ts",
+      "sha256": "5aa8e6dce0f9e172ad9bac7e6c295e6b81aa9b8d0c480594f5eed6fb676de24a",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/storage/storage-sqlite/tests/sqlite-backend.spec.ts",
+      "sha256": "da9cec2addb85d9661a93664e7346a0b92509118e9e443a6e06e5bc868b19ca9",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess/package.json",
+      "sha256": "50445d6b6a0f44addb1d4b7c2c9ac713cb2a91d4a3f13ffebc06965469696d10",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/subprocess/subprocess/src/index.ts",
+      "sha256": "3545a25e219efec22fd329d57f9225f047531277f87d07318520eef43be0279b",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess/tests/service.spec.ts",
+      "sha256": "bd7de92fc5e67af2af7507d6bca2ed59d23df1b8ead4a7739239d9488feb0515",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/package.json",
+      "sha256": "f8fdd76970458e2bbfcccc71ffa9f5133fd0202f192aa48b4d5fa089f7cf755c",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/src/index.ts",
+      "sha256": "c0ae2daaa026e2df0b05df4cd44d8ddc26a694956597330812922f8488d9795b",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/control.spec.ts",
+      "sha256": "bd69eb0d0360c0038b7e1cb614916a68fcbf5859d6d619505fcef739395a5d9b",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/fixtures/process-exit-host.ts",
+      "sha256": "2b489a0f71c595290a19d80c4c7923fa151bf23fe2c8ed0108b9acf2bfbc9158",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/local.spec.ts",
+      "sha256": "fd6d4fa910fb432095c726428968b2b9c51f8e563585f703ab4e0e2448fcdf4f",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/native-containment.spec.ts",
+      "sha256": "0a3c3fd965bde717a8812cd84c5ea1c7884aefa9d2afc0dbad0f608cfd1923be",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/shell-activity.spec.ts",
+      "sha256": "4402a69c1aa5fb3c1e815687e99970523cae0dc4c1a669632bc41e48ead8adce",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/spawn.spec.ts",
+      "sha256": "0a9d4afc1fd955cabce744d789e1ab327bb41188893b38145f780c7da2cda9ef",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/subprocess/win32-process/package.json",
+      "sha256": "a8e983cf9a4683b5eea37b9128dd2eb7c3edd39194099f72f4a867f6c270b5b1",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/util/http-proxy/package.json",
+      "sha256": "16ffdb155b4c7f2384f235d34a18c744b9d7e8f88d15b9881c7253fe1f182538",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/util/launch-environment/package.json",
+      "sha256": "21d348458213f51bbd767de9d1734d98782a5ebd6a1b3f19e91bb30b7e4db865",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/util/launch-environment/src/index.ts",
+      "sha256": "836a934df1b59b9722a9c46c3185ba140d1432052c5ed2fc0046d82b2727cd80",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/util/launch-environment/tests/launch-environment.spec.ts",
+      "sha256": "51f675234147395079e8bf5128cac6e7ea1eed8537c5bd2218127f3425470f7c",
+      "reason": "Use the single local Cordis core and upstream Schemastery/Cosmokit package identities."
+    },
+    {
+      "path": "packages/util/lazy-require/package.json",
+      "sha256": "de1a3c903be0a16b25a2601d9af4444574c0c00b4edb9bafdba9ea7e0de4c3d7",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/util/timeout/package.json",
+      "sha256": "bf4898b9761df6328eb81db15b515f72501a1543169b8b6f422f6c386ddfd649",
+      "reason": "Local private workspace packaging: one Cordis, standard Schemastery, unbundled ESM exports, explicit runtime/type dependencies; replace Harness-specific smoke harness in local test."
+    },
+    {
+      "path": "packages/client/store/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/client/ui-slots/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/core/scope/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/storage/storage/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/storage/storage-domain/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/storage/storage-json/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/storage/storage-sqlite/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/subprocess/subprocess/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/src/spawn-runner.ts",
+      "sha256": "48d5e13e94e47c1d9c8428269a031579fc14bb6b95196a019ee24a7b47949e95",
+      "reason": "Use optional Process.disconnect safely with the installed Node type declarations."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tests/process-exit.spec.ts",
+      "sha256": "d4abf2ac567d676be7c6ae0488baeaec433c977ea6ad4c0ffaf75b724411bd23",
+      "reason": "Run the original exit-cleanup fixture directly with tsx/esm and the local source graph instead of the Harness app/Agent smoke harness."
+    },
+    {
+      "path": "packages/subprocess/subprocess-local/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/subprocess/win32-process/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/util/http-proxy/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/util/launch-environment/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/util/lazy-require/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "packages/util/timeout/tsconfig.json",
+      "sha256": "30ed240e85912929415639abd0075131eff47b1c7837f3f6fcf25d369d89b1f6",
+      "reason": "Use the local aggregate source graph and no-emit editor configuration; remove references to unimported Harness packages."
+    },
+    {
+      "path": "tsconfig.base.json",
+      "sha256": "e560a34985e0f55209bff301b808d9e453902cdd650272b55ff9156a7d6460f7",
+      "reason": "Local source resolution for standalone tests and process-runner fixtures."
+    },
+    {
+      "path": "tsconfig.json",
+      "sha256": "6d36584d4290965245816983b13217db01475ae68f0a269f021697fa4e65e26b",
+      "reason": "Local source resolution for standalone tests and process-runner fixtures."
+    }
+  ],
+  "compatibility": {
+    "cordis": "cordis@4.0.0-rc.12 (local workspace)",
+    "node": ">=22.19.0 <23",
+    "replacements": {
+      "@deepseek-ai/cordis": "cordis",
+      "@deepseek-ai/schemastery": "schemastery",
+      "@deepseek-ai/cosmokit": "cosmokit"
+    },
+    "build": "Root TypeScript aggregate; ESM code and declarations side by side in package lib directories."
+  }
+}

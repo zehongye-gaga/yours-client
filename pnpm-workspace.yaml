@@ -1,5 +1,11 @@
 packages:
-  - vendor/cordis/packages/core
+  - vendor/cordis/packages/*
+  - vendor/deepseek-harness/packages/*/*
+
+linkWorkspacePackages: true
+preferWorkspacePackages: true
 
 onlyBuiltDependencies:
   - esbuild
+  - koffi
+  - node-pty

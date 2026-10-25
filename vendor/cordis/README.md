@@ -1,21 +1,24 @@
 # Yours Client 的 Cordis 本地分支
 
-这份源码是 Yours Client 使用的微内核。当前原样引入 Cordis `4.0.0-rc.12` 的 `packages/core`，基于提交 [`35fdc969e4b6c48c48ed44717c7a018324e4dd88`](https://github.com/cordiverse/cordis/tree/35fdc969e4b6c48c48ed44717c7a018324e4dd88)，后续可以直接修改本目录源码。
+这份源码是 Yours Client 使用的微内核与配套插件。基于提交 [`35fdc969e4b6c48c48ed44717c7a018324e4dd88`](https://github.com/cordiverse/cordis/tree/35fdc969e4b6c48c48ed44717c7a018324e4dd88)，后续可以直接修改本目录源码。
 
-当前引入 9 个源码文件、17 个测试及测试辅助 TypeScript 文件，连同包描述、README、配置和 MIT 许可证共 36 个上游文件。`UPSTREAM.json` 保留原始来源和文件哈希；当前没有上游源码修改。loader、hmr、include 等其他包尚未引入。
+当前包含 `core@4.0.0-rc.12`、`loader@1.0.0-rc.9`、`include@1.2.0`、`group@1.0.0`、`timer@1.1.4`、`hmr@1.1.2` 和 `logger-console@1.0.0`，共 141 个来源文件（含逐包许可证）。`UPSTREAM.json` 保留原始文件哈希与本地变更。核心仍是原来的 9 个源码文件；本次没有修改核心源码。
+
+配套插件选择与 core 相同的上游快照。Harness 的配套插件属于另一条分支，未混入这套内核。本地仅调整 HMR 测试的 Loader `baseUrl`，让独立工作区中的根配置项具有明确解析位置；运行时源码保持上游内容。
 
 ## 使用
 
 根目录通过 pnpm workspace 把 `cordis` 解析到 `packages/core`。执行 `pnpm build:cordis` 会生成 `packages/core/lib`，业务代码直接 `import { Context } from 'cordis'`，不是从 npm 下载另一个同名内核。
 
-构建由项目根目录的 `tsconfig.cordis.json` 管理，保留上游的核心类型检查选项，并把源码中的 `.ts` 相对导入转换为产物中的 `.js`。上游自己的配置只作为原始资料保留；本项目不使用上游的 Yarn / Yakumo 构建系统。
+`pnpm build` 通过根目录 `tsconfig.vendor.json` 和 `scripts/build-vendor.mjs` 构建全部复用包。它转换 `.ts` 相对导入、保留 JavaScript 可访问的枚举，并用 esbuild 将 HMR 的 YAML 语言资源内联；依赖保持外部包引用，所有消费者共享同一个 `cordis`。`tsconfig.cordis.json` 仍可用于单独构建 core。上游自己的配置保留作参考；本项目不使用 Yarn / Yakumo 构建系统。
 
-`bin.js` 也按原样保留，但其配套 loader/include 不在当前范围中；现在的入口是 Context API 和根目录示例，不是 Cordis CLI。
+`bin.js` 按原样保留；本次接入使用 Context / Loader API 和根目录示例，产品启动入口随后实现。开发时的 ESM HMR 需要 Node 模块加载器内部接口，测试通过 `--expose-internals` 启用；它不承担业务插件的进程级原子升级。
 
 ```sh
 pnpm install --frozen-lockfile
 pnpm test
 pnpm demo:cordis
+pnpm demo:reuse
 ```
 
 ## 后续修改

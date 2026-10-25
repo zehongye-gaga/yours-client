@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2024",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": false,
+    "noEmit": true,
+    "types": ["node", "react"],
+    "lib": ["ES2024", "DOM", "DOM.Iterable"]
+  },
+  "include": [
+    "tests/contracts/slot-host.d.ts",
+    "vendor/deepseek-harness/packages/client/ui-slots/tests/type-chain.client.spec.tsx"
+  ]
+}
